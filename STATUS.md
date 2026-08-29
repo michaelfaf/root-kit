@@ -1,0 +1,79 @@
+# Kit progress
+
+> Maintained by the implementing AI. Tick tasks as they complete; record decisions the moment they're made. A fresh session resumes from this file alone.
+
+## Scan results (Phase 0)
+
+| Check | Finding |
+|---|---|
+| Platform (files? shell? subagents? memory?) | _pending_ |
+| Instructions file my platform reads, and its scope | _pending_ |
+| Where the user's work lives | _pending_ |
+| Existing root files / instructions (read in full) | _pending_ |
+| Obsidian vault present? | _pending_ |
+| Top-level folder count | _pending_ |
+
+## Decisions (Phase 1)
+
+| # | Decision | Choice | Notes |
+|---|---|---|---|
+| DP-1 | Standing-instructions file | _pending_ | |
+| DP-2 | One workspace or split | _pending_ | |
+| DP-3 | About-me depth | _pending_ | |
+| DP-4 | Numbers in-file or pointers | _pending_ | |
+| DP-5 | README depth | _pending_ | |
+| DP-6 | Obsidian-native or plain markdown | _pending_ | |
+| DP-7 | Folder scheme | _pending_ | |
+
+## Tasks
+
+### Phase 0 — Environment scan
+- [ ] Platform + capabilities identified
+- [ ] Instructions file + its scope identified
+- [ ] Workspace located (or chat-only path confirmed)
+- [ ] Existing root files read in full
+- [ ] Scan results recorded above
+- [ ] User told what this installs, and confirmed
+
+### Phase 1 — Decisions
+- [ ] DP-1 through DP-7 decided and recorded above
+
+### Phase 2 — Interview
+- [ ] Budget + privacy line + "I'll show you each file" stated up front
+- [ ] Block A — Business
+- [ ] Block B — Goals
+- [ ] Block C — About me
+- [ ] Block D — Map
+- [ ] Notes checked for contradictions, generic answers, undated numbers, holes
+
+### Phase 3 — Write and wire
+- [ ] `Business.md` written and shown
+- [ ] `Goals.md` written and shown
+- [ ] `About-me.md` written and shown
+- [ ] `Home.md` written and shown
+- [ ] Section-8 tripwires copied into the standing-instructions file
+- [ ] Standing-instructions file installed and merged (DP-1)
+- [ ] Routing table checked line by line against the depth files
+- [ ] Scope of the instructions file stated to the user
+- [ ] README rule wired in (if DP-5 = A)
+
+### Phase 4 — First live run
+- [ ] Real question answered, routing narrated
+- [ ] Cold-read test: all 5 questions answered from the root alone
+- [ ] Gaps found by the cold-read test fixed in the files, test re-run
+- [ ] "What did we get wrong?" asked and the fix made
+
+### Phase 5 — Wrap
+- [ ] Walk-through done
+- [ ] `_TBD_` list shown to the user
+- [ ] Three habits stated and written into the router
+- [ ] Review cadence set
+- [ ] This file fully ticked
+
+## Open `_TBD_` items
+
+- none yet
+
+## Blockers
+
+- none
