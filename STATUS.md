@@ -60,8 +60,8 @@
 ### Phase 4 — First live run
 - [ ] Real question answered, routing narrated
 - [ ] Cold-read test run in a genuinely fresh context — OR `COLD-READ.md` written and handed to the user, and this marked DEFERRED in Blockers
-- [ ] All 5 questions answered from the root alone (Q4 skipped only if DP-2/DP-3 = C)
-- [ ] Gaps found by the cold-read test fixed in the files, test re-run
+- [ ] All 5 questions answered from the root alone (Q4 skipped only if DP-2/DP-3 = C) — mark `[~]` if the test is deferred
+- [ ] Gaps found by the cold-read test fixed in the files, test re-run — mark `[~]` if the test is deferred
 - [ ] "What did we get wrong?" asked and the fix made
 
 ### Phase 5 — Wrap
@@ -70,11 +70,13 @@
 - [ ] Three habits stated and written into the router
 - [ ] Review cadence set
 - [ ] `STATUS.md` + interview notes moved into the user's workspace (before any kit deletion)
-- [ ] This file fully ticked
+- [ ] This file fully ticked, or every unticked line explicitly marked `[~]` DEFERRED/BLOCKED with a reason in Blockers
 
 ## Open `_TBD_` items
 
 - none yet
+
+> **Marking convention:** `[x]` done · `[~]` deferred or blocked, with a line in Blockers saying why · `[ ]` not started. A resuming session must be able to tell "blocked" from "skipped" — never leave a box unticked with no explanation.
 
 ## Blockers
 

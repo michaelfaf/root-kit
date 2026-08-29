@@ -30,7 +30,7 @@ Before asking the user anything, find out what you're working with. Record findi
 
 1. **What am I?** Your own platform (Claude Code / Codex / Cursor / Cline / Copilot / chat-only / other), and whether you can: read and write files, run shell commands, spawn subagents, persist memory across sessions.
 2. **Which standing-instructions file does my platform actually read, and at what scope?** Claude Code reads `CLAUDE.md` (project root, plus `~/.claude/CLAUDE.md` globally). Codex, Cursor, Amp, Copilot and several others read `AGENTS.md`. Cursor also reads `.cursor/rules/*.mdc` files, which are scoped per-glob rather than global. Chat-only tools have a custom-instructions box with a character limit. **Scope matters more than filename**: a workspace-scoped file only fires when that workspace is open, and you must tell the user that.
-3. **Where does the user's work live?** An Obsidian vault, a notes folder, a git repo of documents, a Drive folder. Look before you ask. If nothing is visible from where you're running, ask.
+3. **Where does the user's work live, and who else can reach it?** An Obsidian vault, a notes folder, a git repo of documents, a Drive folder. Look before you ask. Note the *path* — is it under a personal cloud folder (iCloud, Dropbox, OneDrive), a shared drive, or a repo with other collaborators? Record the path and what you could and couldn't determine; DP-2 turns on it, and "syncs to their own devices" is a different answer from "another person can open it."
 4. **What's already at the root?** Read every existing instructions file, README, or notes-about-notes file **in full** before you write anything. You are merging into their conventions, not bulldozing them. If they already have a `CLAUDE.md` with rules in it, those rules survive — you're adding a router around them, not replacing them.
 5. **Is this Obsidian?** Look for a `.obsidian/` directory. It decides DP-6.
 6. **How many top-level folders?** Note the count. **Write `Home.md` anyway** — even at four folders it carries the Key Routes section, which is the part people actually use, and the router needs somewhere to send "where is X." Skip it only if the user, told the trade-off, says they'd rather not have the file.
@@ -56,6 +56,8 @@ Present each one conversationally: context, options with trade-offs, your recomm
 
 **Recommendation:** **C** if the scan found any file-capable coding agent, even one — it costs one extra line and it means the root survives you switching tools next year, which people do more often than they expect. **A** if they're certain they'll only ever use Claude tooling. **D** only if there's genuinely no file access.
 
+**If they already have a `CLAUDE.md` with real rules in it and you're taking option C:** move their rules into `AGENTS.md` **first**, show them the merged file, and only then reduce `CLAUDE.md` to the pointer line. Never leave two files with overlapping rules — the kit's own words: worse than either one alone.
+
 **If the scan found Cursor specifically:** take **C *plus* E** — put the router in `AGENTS.md` and add a one-line always-apply `.mdc` that says *"Read AGENTS.md at the start of every session."* Cursor's own mechanism is the thing that reliably fires; `AGENTS.md` is what keeps the content portable to the next tool. Don't put the router content itself in the `.mdc`, or you've locked it to one editor.
 
 **Scope warning, all options:** if your platform's instructions file is workspace-scoped, it only fires when that workspace is open. Put it where the work lives, and tell the user which sessions will and won't see it. A user who thinks their rules are global and finds out they weren't loses trust in the whole system.
@@ -67,18 +69,28 @@ Present each one conversationally: context, options with trade-offs, your recomm
 - **B. Split** — a private workspace with `About-me.md` and personal projects, and a shared space holding `Business.md`, `Goals.md`, and the team-facing standing-instructions file. *Trade-off:* two roots to maintain, and business facts have exactly one home or they drift.
 - **C. Business-only** — no `About-me.md` at all. *Trade-off:* you lose the file that does the most to change how the AI actually behaves.
 
-**Ask, don't infer.** The deciding fact is not visible to your scan — it lives in the user's head. Ask both:
-> 1. *"Will anyone else — a teammate, an assistant, a co-founder — ever point their AI at this folder?"*
-> 2. *"Is this folder inside anything that syncs or is shared?"* (iCloud Desktop, Dropbox, Google Drive, a team repo.) Check the path yourself if you can; a personal file in a synced folder is shared whether or not anyone intended it.
+- **D. Business files exported to where the team already is** — `About-me.md` and the router stay in the private workspace; the business context gets copied or published into the tool the team actually uses (Notion, a wiki, a shared drive). *Trade-off:* two formats and a sync habit, but it's the only option that reaches a team who will never open your folder.
 
-**Recommendation:** **B if either answer is yes; A if both are no.** Start at A if they genuinely don't know — it's the cheaper mistake to fix, and `About-me.md` is one file to move. If the user says "whatever you recommend," ask the two questions first: this is not a decision you can take on their behalf without them.
+**Ask, don't infer — and do not confuse syncing with sharing.** A file replicated to the user's own laptop and phone is not shared with anyone. The deciding question is whether *another person* can open it. Ask:
+> 1. **The decisive one:** *"Can another person open this folder — a shared folder or shared drive, a team repo, a machine someone else uses? Not 'does it sync to your own devices' — can another human get in?"*
+> 2. *"Will anyone else ever point their AI at it?"*
+> 3. *"Where does your team actually keep shared context today?"* (If the answer is a different product entirely, that's option D.)
+
+**Recommendation:**
+> - **Another person can open it, or will** → **B**.
+> - **Nobody else can open it, but there is a team who'd benefit from the business context, living in another tool** → **A now, D when it's worth the effort.** Note it as a habit; don't build it today.
+> - **Nobody else can open it and there's no team** → **A**. Personal cloud sync (iCloud, Dropbox, a private repo) on the user's own account is **not** a reason to split.
+
+**If they genuinely don't know: A.** It's the cheaper mistake to fix, and `About-me.md` is one file to move.
+
+**Revisit trigger:** Block A question 4 asks where their numbers live, and it routinely surfaces a shared system nobody mentioned here. **If Block A reveals a tool other people are in, come back to this decision before you write `About-me.md`** — you decided it a phase too early on purpose, because the interview is where the truth shows up.
 
 The thing to know going in: **`About-me.md` is what forces the split later.** It's the file that makes the system work and the file you can't share. When a teammate first needs the business context, that's the split, and it's a good problem — it means the root got used.
 
 ### DP-3 — How much of `About-me.md` to write now?
 
 **Options:**
-- **A. Seed** — 20 minutes: purpose, strengths, blind spots, how to push back, decision style, numbers fluency. Roughly Block C questions 1–9. *Trade-off:* thin at first; several sections are stubs.
+- **A. Seed** — 20 minutes: purpose, strengths, blind spots, how to push back, decision style, numbers fluency. **Block C questions 1–9, plus question 13** (the unresolved tensions — short, and the highest-value answer in the block). *Trade-off:* thin at first; three sections are stubs.
 - **B. Full** — the whole of Block C plus the optional sections, in one sitting. Budget two hours and expect it to be draining. *Trade-off:* long, and half of what you write on day one is guesswork about yourself.
 - **C. Skip for now.** *Trade-off:* the AI advises a generic person in your situation instead of you, which is most of what you were trying to fix.
 
@@ -88,7 +100,7 @@ The thing to know going in: **`About-me.md` is what forces the split later.** It
 > 3. Skip question 4 of the Phase 4 cold-read test, and record in `STATUS.md` that the personal layer is not installed and therefore not tested.
 > 4. Drop the first of the three Phase 5 habits and keep the other two.
 
-**If A (the recommendation): three non-optional template sections have no interview question behind them** — `Current state`, `When I'm stressed or overwhelmed`, and `Never assume` come from Block C questions 10-12, which sit outside the seed. Stub all three with `_TBD_` and a one-line note saying they fill in as things happen. Do not delete them: they are the sections most likely to earn their keep in month two, and an empty heading with a reason attached is an invitation, where a missing heading is a decision the user never made.
+**If A (the recommendation): three non-optional template sections have no interview question behind them** — `Current state`, `When I'm stressed or overwhelmed`, and `Never assume` come from Block C questions 10-12, which sit outside the seed. (`Held, not solved` is *inside* the seed — ask question 13.) Stub all three with `_TBD_` and a one-line note saying they fill in as things happen. Do not delete them: they are the sections most likely to earn their keep in month two, and an empty heading with a reason attached is an invitation, where a missing heading is a decision the user never made.
 
 **Recommendation:** **A**, and this isn't hedging. The seed is enough to change AI behavior on day one — push-back rules and decision style do most of the work. The best entries in this file come from friction that hasn't happened yet: the gate that's actually worth having is the one written the week after you did the thing you keep doing. Set the habit instead: **when a session goes wrong in a way that's about you rather than the work, that's an `About-me.md` entry.** Tell the user that line explicitly; it's the whole retention mechanism.
 
@@ -104,6 +116,8 @@ The thing to know going in: **`About-me.md` is what forces the split later.** It
 > - **A real system of record you can read** (an API, a synced export, a file on disk) → **C**.
 > - **A real system of record you cannot read** — Stripe, QuickBooks, a CRM behind a login, a Google Sheet you have no access to → **D**. *This is the common case for a small business, and it is not option A.* Pin structure and targets in-file with dates; name the system explicitly as a human-fetch source so neither of you mistakes a pinned number for a live one.
 > - **No system of record at all** — the numbers live in a spreadsheet nobody has opened since March → **A**, with disciplined verification dates, and say plainly that the dates are the only thing keeping the file honest.
+
+**More than one system of record is normal** — accounting in one tool, projects or customers in another, each owning a different kind of truth. Don't force one pointer. Give each system its own routing row and its own line in the source key, and say what each one owns: *"money → the accounting system, human-fetch; project hours and status → the shared workspace, human-fetch."* A single `<system of record>` slot with two systems crammed into it is how a file starts lying.
 
 **If the user says "whatever you recommend," the answer is whichever of C/D/A the condition above selects for their scan** — never a default letter. Say which one you took and why.
 
@@ -153,7 +167,7 @@ Before you start, say three things out loud:
 2. **The privacy line for Block C** — confirm the DP-2 decision before the personal questions, not after. If the file is going anywhere a teammate can reach, they need to know that before they answer.
 3. **That you'll show each file before saving it.** The first read is where they catch the thing you got backwards, and they will catch at least one.
 
-Take notes in a file as you go. If this session dies mid-interview, the notes are the only thing that saves an hour of their time.
+**Take notes in a file as you go** — create `install-notes.md` in the kit folder (it moves into their workspace at Phase 5). If this session dies mid-interview, those notes are the only thing that saves an hour of their time.
 
 Tick each block in `STATUS.md` as it completes.
 
@@ -169,8 +183,11 @@ Four rules, and they are not negotiable:
 
 1. **Never leave a `<placeholder>` in an installed file.** Fill it or delete the line. A live root file containing `<Your target here>` teaches the AI that placeholders are acceptable content, and it will start producing them.
 2. **Never invent an answer.** Anything they didn't say gets `_TBD_` and goes on the wrap-up list.
-3. **Every number carries the date it was stated.**
+3. **Every number carries the date it was stated.** For a table, one dated line above or below it covers every row — don't stamp forty cells. For a figure in prose, stamp it inline.
+   *(And the placeholder rule in point 1 means **the kit's** `<placeholders>`. If the user's own conventions use angle brackets — `<client>/<client>.md` — that's their notation, not a hole; keep it, and say so in the wrap-up so nobody "fixes" it later.)*
 4. **Strip the HTML comment blocks last** — after the file reads correctly with them in. They're the specification; check the file against them before deleting.
+
+**Rough lengths, so you know when to stop:** `Business.md` 900–2,000 words · `Goals.md` 600–1,200 · `About-me.md` 500–900 at seed depth · `Home.md` 200–450. These are orientation, not gates — a business with two customer types and one product runs short, one with three revenue lines runs long. The real test is the same for all four: **would a session that read this file give better advice than one that didn't?** Padding fails it as surely as a gap.
 
 Then the deliberate duplication: **copy the two or three most important lines from `Business.md` section 8 into the standing-instructions file.** Those lines are the *tripwires* — the reasonable assumptions about this business that happen to be false, the ones that would otherwise get corrected by hand in every session forever. This is the only duplication in the whole system. It exists because a tripwire one lookup away fires too late: by the time the AI reads the business file, it has already given the wrong advice.
 
@@ -190,7 +207,7 @@ Then say the scope out loud one more time: which sessions will read this file, a
 
 ### 3c — The README rule (if DP-5 = A)
 
-Don't sweep the whole workspace writing READMEs. Apply the rule when a folder next changes. Put the rule itself in the router — the "Operational pointers" section of the template has the line — and keep `templates/FOLDER-README.md` where the AI can find it.
+Don't sweep the whole workspace writing READMEs. Apply the rule when a folder next changes. **The rule goes into the router in full** — the "Operational pointers" section of the template states it complete, with the guard, so it survives this kit being deleted. Do not leave the router pointing at `templates/FOLDER-README.md`: that file lives in the kit, and Phase 5 offers to delete the kit. If the user wants the annotated template kept, copy it into their workspace and point at the copy.
 
 If a folder passes the three tests *today* and obviously needs one, write that one. Usually there's one. Rarely three. **Often zero — that's a pass, not a failure.**
 
@@ -208,7 +225,53 @@ The install isn't finished until it's been used on something real.
 
    **Pick your tier before you start:**
    > - **You can spawn a subagent or a genuinely fresh context** → run it yourself, now.
-   > - **You cannot** (no subagents, and you ran the interview, so you can't un-remember it) → **do not fake it.** Write `COLD-READ.md` into the workspace containing the five questions below, the exact list of files a reader is allowed to open (the router, and only what it routes to), and a one-line instruction: *"Paste this into a brand-new chat with no history. Report which questions it could not answer."* Mark the check **DEFERRED — awaiting user run** in `STATUS.md` → Blockers, tell the user the install is not complete until they report back, and tell them what to do with the result: any question that fails is a gap in the files, and they should bring it back to you to fix.
+   > - **You cannot** (no subagents, and you ran the interview, so you can't un-remember it) → **do not fake it.** Write `COLD-READ.md` into the workspace using the template below, mark the check **DEFERRED — awaiting user run** in `STATUS.md` → Blockers, and tell the user the install isn't complete until they report back.
+
+   **`COLD-READ.md` — copy this, filling the bracketed parts:**
+   ```markdown
+   # Cold-read test
+
+   This checks whether the root files can be *routed to*, not just whether they exist.
+   It has to be run by something that did not sit through the interview.
+
+   ## Run it one of two ways
+
+   **A. A fresh agent session in this workspace** (new Claude Code / Codex / Cursor
+   session, no history). Say: "Read only [ROUTER FILENAME] and whatever it points
+   you to. Then answer these five questions." — best option: it exercises the
+   routing table, which is the half that actually fails.
+
+   **B. A brand-new chat with no file access** (claude.ai, ChatGPT). A fresh chat
+   cannot see this folder, so you must paste the files in first: paste
+   [ROUTER FILENAME], then [LIST THE DEPTH FILES IT ROUTES TO]. Then ask the five
+   questions.
+
+   ## The questions
+
+   1. What does this business do, and who pays for it?
+   2. What's the target this year, and the priority this quarter?
+   3. Name one thing an outsider would get wrong about this business.
+   4. How does this person want to be pushed back on?
+   5. [THE SPECIFIC QUESTION — see below]
+
+   ## Scoring
+
+   A pass is a correct answer reached from the files alone.
+
+   **Not a pass:** a partial answer · "the files don't say" where the files *should*
+   say · an answer only reachable by opening a file the router never points to.
+
+   **Is a pass:** "that number isn't in the files — it lives in [SYSTEM], which the
+   notes name as the place to look." That is the designed behaviour for anything
+   pinned as a live figure, not a failure.
+
+   ## What to do with the result
+
+   Any real failure is a gap in the files, not in the reader. Bring it back and
+   we'll fix the file — usually it's the routing table, not the depth.
+   ```
+
+   Then tell the user which of A or B you recommend for their setup, and that route A is worth the extra minute.
 
    Read only the standing-instructions file and whatever it routes to, then answer:
    - What does this business do and who pays for it?
@@ -219,7 +282,9 @@ The install isn't finished until it's been used on something real.
 
    Five clean answers with no prior context means the root works. **If a question can't be answered, the gap is in the file, not the reader** — go fix the file, then re-run. This test is the acceptance check for the whole install; don't declare it passed without running it.
 
-   **What is not a pass:** a partial answer; an answer you could only give because you remembered the interview; *"the files don't say"*; or an answer assembled by reading a file the router doesn't actually route to. That last one is the common failure — it means the depth is fine and the routing table is broken, which is the half that matters.
+   **What is not a pass:** a partial answer; an answer you could only give because you remembered the interview; *"the files don't say"* about something the files were supposed to hold; or an answer assembled by reading a file the router doesn't actually route to. That last one is the common failure — it means the depth is fine and the routing table is broken, which is the half that matters.
+
+   **What IS a pass, and don't score it wrong:** *"that figure isn't in the files — it's in <the accounting system>, which the notes name as the place to look."* Under DP-4 = B, C or D that is the install working exactly as designed. Only score "the files don't say" as a failure when the file was supposed to hold the answer.
 
    *Chat-only:* open a brand-new chat, paste only the router plus the file it points to, and ask the five questions there.
 

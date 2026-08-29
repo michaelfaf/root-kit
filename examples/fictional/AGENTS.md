@@ -4,11 +4,11 @@ Operating instructions for every session. Depth lives in linked files, read on d
 
 ## When to read what
 
-- Coaching, behavioral, "am I being an idiot about this" → `About-me.md`
-- Targets, priorities, what matters this quarter, cadence → `Goals.md`
-- Business model, customers, pricing, expansion → `Business.md`
-- Where anything lives → `Home.md`
-- Live pricing, property counts, route data, crew schedules → Aspire (the ops platform) — pull live, never cached in a file
+- Coaching, behavioral, "am I being an idiot about this" → [About-me.md](About-me.md)
+- Targets, priorities, what matters this quarter, cadence → [Goals.md](Goals.md)
+- Business model, customers, pricing, expansion → [Business.md](Business.md)
+- Where anything lives → [Home.md](Home.md)
+- Live pricing, property counts, route data, crew schedules → **Aspire (the ops platform) — Dana opens it; I can't reach it.** Ask her for the figure rather than guessing, and never treat a number in these files as current.
 - Contract or site notes for a specific property → `Clients/<property>.md`
 - Greeley branch planning, new-business pipeline → `Growth/README.md`
 - Hiring pipeline, crew lead profiles → `Team/README.md`
@@ -59,8 +59,8 @@ Facts to never get wrong:
 
 - **Plans / documents:** property-specific notes go in `Clients/<property>.md`. Anything cross-cutting (branch planning, hiring strategy) goes in the owning folder's README.
 - **Projects:** the Greeley go/no-go and the Anchor-account margin audit are the two live ones this quarter — status lives in `Goals.md`, working detail in `Meetings/`.
-- **Tool preferences:** Aspire is the system of record for anything that changes weekly — pricing, property counts, schedules. Treat any number in these files as a snapshot with a date, not current truth.
-- **READMEs:** a folder earns one only if it's a real navigation hub, has a non-obvious purpose, or has conventions a newcomer would miss. Skip it for homogeneous leaf folders like `Meetings/` or `Archive/`.
+- **Tool preferences:** Aspire is the system of record for anything that changes weekly — pricing, property counts, schedules. **It is not connected to this workspace (DP-4 = D):** when a live figure is needed, say which screen in Aspire has it and ask Dana to pull it. Every number in these files is a dated snapshot, not current truth — check the date before using one.
+- **READMEs:** a folder earns one only if it's a real navigation hub, has a non-obvious purpose, or has conventions a newcomer would miss. Skip homogeneous leaf folders like `Meetings/` or `Archive/`. Guard: if every section would just restate the folder name and a directory listing, write nothing. Update when a folder's structure, purpose or conventions change — not on individual file edits.
 
 ## Before building
 

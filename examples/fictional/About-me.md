@@ -8,7 +8,7 @@ updated: 2026-08-12
 
 Personal context. **Not loaded every session** — read on demand, when the work is about me directly: coaching, behavioral patterns, hard calls, life decisions.
 
-> **Related:** `AGENTS.md` (operating context) · `Goals.md` (targets, including personal) · `Business.md` (the business)
+> **Related:** [AGENTS.md](AGENTS.md) (operating context) · [Goals.md](Goals.md) (targets, including personal) · [Business.md](Business.md) (the business)
 > **Last verified:** 2026-08-12 — numbers and life-state drift. Check the date before coaching off them.
 
 ---
@@ -37,7 +37,7 @@ Client relationships and building the crew energize me. Estimating and the books
 **Trigger:** any time I say I'll "just handle" a bid, a site visit, or a hiring call myself.
 
 **Run out loud, before helping with the thing:**
-1. Is this Marisol's or Wes's job by `Business.md` §7?
+1. Is this Marisol's or Wes's job by [Business.md](Business.md) §7?
 2. Am I doing it because I'm actually faster, or because handing it off just feels slower today?
 3. What does it cost me not to do this — which of my three daily client touches doesn't happen instead?
 4. If I do it anyway, what's the one-line reason — log it.
@@ -95,7 +95,7 @@ No separate voice file yet. Rules until there is one: direct, short sentences, n
 
 ## Long-term picture (personal)
 
-I don't know if I want three branches or one very profitable Fort Collins operation, and I flip-flop depending on who I talked to last — an EO-forum peer pushes scale, my bookkeeper pushes staying lean and paying it out. The 2029 picture in `Goals.md` is a working scenario, not a decision I've made. Hold both options open — don't assume growth is the goal just because it's the plan that's written down.
+I don't know if I want three branches or one very profitable Fort Collins operation, and I flip-flop depending on who I talked to last — an EO-forum peer pushes scale, my bookkeeper pushes staying lean and paying it out. The 2029 picture in [Goals.md](Goals.md) is a working scenario, not a decision I've made. Hold both options open — don't assume growth is the goal just because it's the plan that's written down.
 
 ---
 

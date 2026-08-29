@@ -6,7 +6,7 @@ updated: 2026-07-28
 
 # Business — Ridgeline Grounds Co.
 
-Canonical source for the model, customers, pricing, and expansion. `AGENTS.md` routes every business-model question here. Sources cited in brackets — key at the foot.
+Canonical source for the model, customers, pricing, and expansion. [AGENTS.md](AGENTS.md) routes every business-model question here. Sources cited in brackets — key at the foot.
 
 > **Last verified:** 2026-07-28 · **Currency check:** property count — 268 at 2025 year-end is the last pinned figure; the live count is higher and lives in Aspire, not here.
 

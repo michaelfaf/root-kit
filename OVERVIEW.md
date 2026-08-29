@@ -33,7 +33,7 @@ The thing that makes this work rather than just being tidy: **an AI reads a rout
 
 Five files at the root of wherever you work.
 
-**The router** — `CLAUDE.md` or `AGENTS.md`, depending on your tools. The routing table, plus your identity, your rules and boundaries, how you want decisions handed to you, and the two or three business facts that must be true in every session. Deliberately small: 400–900 words.
+**The router** — `CLAUDE.md` or `AGENTS.md`, depending on your tools. The routing table, plus your identity, your rules and boundaries, how you want decisions handed to you, and the two or three business facts that must be true in every session. Deliberately small — it routes instead of containing (the template states the target).
 
 **`Home.md`** — the map. Top-level folders and load-bearing files, one line each, every entry routing onward. Never leaf notes. This is *where things are*, not how they work.
 

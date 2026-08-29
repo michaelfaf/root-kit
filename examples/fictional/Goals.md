@@ -6,7 +6,7 @@ updated: 2026-07-28
 
 # Goals
 
-> **Related:** `AGENTS.md` (operating context) · `About-me.md` (personal context) · `Business.md` (the model)
+> **Related:** [AGENTS.md](AGENTS.md) (operating context) · [About-me.md](About-me.md) (personal context) · [Business.md](Business.md) (the model)
 >
 > **Weekly progress is not captured here** — it lives in the Monday ops meeting notes and Friday renewal review, both in `Meetings/`. This file is target state only.
 
@@ -14,7 +14,7 @@ updated: 2026-07-28
 
 Ridgeline becomes the grounds vendor a property manager never has to think about — one account manager per property, crews that show up on schedule, quality problems fixed before the renewal call. Dana's role shrinks from "does every job on the truck" to "sets the standard and reads the numbers," with estimating moving to Wes and site walks to the crew leads.
 
-**W-2 crews, no subcontracted mowing:** locked permanently — see `Business.md` §8. Every plan below assumes it holds.
+**W-2 crews, no subcontracted mowing:** locked permanently — see [Business.md](Business.md) §8. Every plan below assumes it holds.
 
 ---
 
@@ -84,7 +84,7 @@ Anything that adds properties without pulling Dana back into estimating gets a y
 - **Skills:** read a cash-flow projection without translation — target: run the Q4 2026 review herself.
 - **Self-management:** fully off bids under $40K by 2026-09-30 (personal side of Q3 priority 1).
 
-Context behind each → `About-me.md`.
+Context behind each → [About-me.md](About-me.md).
 
 ---
 

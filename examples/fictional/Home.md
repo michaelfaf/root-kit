@@ -10,10 +10,10 @@ Where things live. Top-level folders and load-bearing files only, never leaf not
 
 ## Start here — root files
 
-- `AGENTS.md` · how the AI operates — read every session
-- `Goals.md` · targets, priorities, cadence
-- `Business.md` · Ridgeline's model — customers, pricing, expansion
-- `About-me.md` · Dana's coaching, behavioral, decision patterns
+- [AGENTS.md](AGENTS.md) · how the AI operates — read every session
+- [Goals.md](Goals.md) · targets, priorities, cadence
+- [Business.md](Business.md) · Ridgeline's model — customers, pricing, expansion
+- [About-me.md](About-me.md) · Dana's coaching, behavioral, decision patterns
 
 ## Folders
 
@@ -30,6 +30,6 @@ This is a working folder scheme, not a template someone else has to copy. It gre
 ## Key routes
 
 - What's this account's current rate or renewal date? → Aspire (live), not the vault
-- Why did we kill residential mowing? → `Business.md` §9
-- What's gating the Greeley go/no-go? → `Goals.md`, Q3 priorities
-- How do I push back on Dana? → `About-me.md`
+- Why did we kill residential mowing? → [Business.md](Business.md) §9
+- What's gating the Greeley go/no-go? → [Goals.md](Goals.md), Q3 priorities
+- How do I push back on Dana? → [About-me.md](About-me.md)

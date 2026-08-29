@@ -69,7 +69,7 @@ Your AI walks you through each with trade-offs and a recommendation:
 
 ## What you end up with
 
-- A standing-instructions file under a thousand words that routes instead of containing
+- A standing-instructions file that routes instead of containing — typically 700–1,200 words
 - Four root files holding the depth, written in your words, with nothing invented
 - A business file whose best section is the list of things outsiders get wrong about you
 - A personal file whose best section is how you want to be pushed back on

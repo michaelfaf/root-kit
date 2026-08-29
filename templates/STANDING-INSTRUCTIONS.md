@@ -6,12 +6,14 @@ THE ONE RULE FOR THIS FILE: it routes, it does not contain.
 Anything that takes more than three lines to say lives in a depth file and gets a pointer here.
 This file is loaded into every single session — every word costs you context on every turn.
 
-LENGTH: aim for 700-1,000 words on a first install. A real install carries more than the
-skeleton below - the user's own merged rules, the README rule, the habits from Phase 5 -
-so landing near 1,000 is normal and is not a failure. Past ~1,500, start moving sections
-out: the test is not the word count, it is whether a line must be true on EVERY turn.
-(The live example in examples/live-vault/ is ~1,600 words and still almost pure routing -
-length earned by pointing at a lot, not by containing a lot.)
+LENGTH - this file is the one place that states it, so nothing can disagree:
+aim for 700-1,200 words on a first install; up to ~1,700 is fine if it is still
+almost entirely routing. A real install carries more than the skeleton below - the
+user's merged rules, the README rule, the Phase 5 habits - so landing past 1,000 is
+normal, not a failure. The test is never the word count. It is: does every line here
+have to be true on EVERY turn? If not, it belongs in a depth file.
+(examples/live-vault/ is ~1,600 words and nearly pure routing - length earned by
+pointing at a lot, not by containing a lot.)
 
 Delete every comment block and every unused section before you install it.
 -->
@@ -118,7 +120,7 @@ Facts to never get wrong:
 - **Plans / documents:** <where they go, naming convention>.
 - **Projects:** <how a project folder gets created and what the session protocol is>.
 - **Tool preferences:** <use X for search, not Y — the fitting tool, not the default>.
-- **READMEs:** a folder earns a README only when one is true: (a) it's a navigation hub with real routing to do, (b) its purpose isn't obvious from the name, or (c) it has conventions or gotchas a newcomer would miss. Skip homogeneous leaf folders (transcripts, attachments, archives, daily notes). Guard: if every section would just restate the folder name and a directory listing, write nothing. Full rule → `templates/FOLDER-README.md`.
+- **READMEs:** a folder earns a README only when one is true: (a) it's a navigation hub with real routing to do, (b) its purpose isn't obvious from the name, or (c) it has conventions or gotchas a newcomer would miss. Skip homogeneous leaf folders (transcripts, attachments, archives, daily notes). **Guard: if every section would just restate the folder name and a directory listing, write nothing** — an unread README that has gone wrong is worse than none. Update when the folder's structure, purpose or conventions change, never on individual file edits. Shape: frontmatter (`type` / `read_first` / `updated`), then Purpose → Start here → Map → State (builds only) → Gotchas, omitting any section that would restate the obvious.
 
 ## Before building
 

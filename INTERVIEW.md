@@ -22,8 +22,17 @@
    **They will ask.** Some version of *"just fill that one in with something reasonable"* comes up in most interviews, usually when they're tired. **Say no, and give them the cheaper path instead:** offer to turn it into a single question they can answer in one line, right now. *"Rather than me guessing — in three years, what are you doing on a Tuesday?"* People who won't write a Vision section will answer that in four words, and four true words beat a good paragraph you made up.
 5. **Date everything they say a number about.** Not the date you write the file — the date they said it. **One convention, everywhere:** `[source, YYYY-MM-DD]`, where source is the person's name for something they told you (`[Dana, 2026-06-02]`), or the system or document for anything else (`[the ops platform, 2026-06-02]`). Quarterly status lines in `Goals.md` carry the date of the last refresh the same way.
 6. **Write in their words, not yours.** If they said "we absorb the coordination burden," the file says that. Don't upgrade it into "value-added service integration." The whole point is that the file sounds like the person whose business it describes.
-7. **You are allowed to disagree.** If an answer contradicts one from ten minutes ago, say so and ask which is right. Contradictions found now are worth more than the entire rest of the interview.
-8. **Take notes as you go, in a file.** Don't hold twenty minutes of answers in conversation and hope. If a session dies mid-interview, the notes are what saves it.
+
+   **If they're not writing in their first language:** keep the phrasing that's vivid and specific, even when the grammar is off — *"July is closed," "we make the pictures of buildings that do not exist yet"* — and tidy only what's merely awkward. Their metaphors are theirs; the article they dropped is not. Never render someone's second language as broken English on the page: that's a caricature, not their voice. **And if the workspace is in another language**, ask which language the files should be in — routing works in either, but the routing table has to be in the words *they'd* type when they ask a question.
+7. **"I don't know — what do you think?" is not permission to answer for them.** It comes up on content questions, not just decisions, and it usually means the question was too abstract. Three moves, in order:
+   > 1. **Shrink it.** Swap the abstraction for a concrete instance: not *"what are your risks"* but *"what went wrong last year that could go wrong again?"* Not *"describe your vision"* but *"in three years, what are you doing on a Tuesday?"*
+   > 2. **Offer two, ask which is closer.** *"I've heard both 'grow the team' and 'stay small and raise prices' from people in your spot — which one makes you flinch?"* Recognising is far easier than generating, and the correction they give you is the real answer.
+   > 3. **Park it.** `_TBD_`, move on, tell them it'll be obvious in a month.
+
+   What you never do is take the silence as a licence to write something plausible. **"You decide" is about the wording; it is never about the facts.** If they ask you to write a whole file for them — a real request, and not the same as asking you to invent — say yes to the drafting and no to the inventing: *"I'll write every word of it. I just can't make up what goes in it — six one-line questions and it's done."* Then ask the six.
+
+8. **You are allowed to disagree.** If an answer contradicts one from ten minutes ago, say so and ask which is right. Contradictions found now are worth more than the entire rest of the interview.
+9. **Take notes as you go, in a file.** Don't hold twenty minutes of answers in conversation and hope. If a session dies mid-interview, the notes are what saves it.
 
 ---
 

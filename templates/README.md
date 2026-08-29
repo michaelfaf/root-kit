@@ -15,7 +15,7 @@ Six templates. Every one is annotated with HTML comments explaining what the sec
 
 - **DP-1 → filename.** Same content either way. If both `CLAUDE.md` and `AGENTS.md` are in play, `AGENTS.md` holds the router and `CLAUDE.md` is one line: *"Read AGENTS.md — it has your instructions for this repo."*
 - **DP-2 → location.** One workspace: all five at the root. Split: `Business.md` and `Goals.md` in the shared space, `About-me.md` in the private one, and the shared standing-instructions file routes to the business files only.
-- **DP-3 → length of `ABOUT-ME.md`.** Seed = Block C questions 1-9; the three sections fed by Q10-12 (`Current state`, `When I'm stressed`, `Never assume`) get stubbed with `_TBD_`, not deleted. Full = every section including the optional block.
+- **DP-3 → length of `ABOUT-ME.md`.** Seed = Block C questions 1-9; the three sections fed by Q10-12 (`Current state`, `When I'm stressed or overwhelmed`, `Never assume`) get stubbed with `_TBD_`, not deleted. Full = every section including the optional block.
 - **DP-4 → what goes in the number-shaped slots.** In-file (A): the figure plus a verification date. Pointer (B): a line naming the system and how to pull it. Hybrid C: structure in-file, actuals fetched by the AI. Hybrid D: structure in-file, actuals named as a source the *user* opens. C and D are the same file; they differ only in who does the fetching, so say which in the line itself.
 - **DP-5 → whether `FOLDER-README.md` gets used at all.** The three tests, README-everywhere, or nothing.
 - **DP-6 → frontmatter and links.** Obsidian: keep the frontmatter blocks, use `[[wikilinks]]`. Plain markdown: delete the frontmatter, use `[text](relative/path.md)`.

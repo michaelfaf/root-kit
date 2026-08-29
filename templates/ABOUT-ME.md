@@ -185,10 +185,27 @@ Delete the ones you don't want; don't leave empty headings, they invite filler.
 ## Health & fitness               — if you want coaching on it; rounded numbers, dated
 ## Network & communities          — the groups you're in and what each is for
 ## Money (brief)                  — rounded, dated, philosophy not statements
-## Long-term picture (personal)   — including the tensions you haven't resolved. The
-                                    unresolved ones are the most useful entries in the
-                                    whole file: they tell the AI what NOT to assume.
+## Long-term picture (personal)   — where this is all going for you, personally.
+                                    (The unresolved tensions have their own
+                                    non-optional section below — don't duplicate.)
 -->
+
+## Held, not solved
+
+<!-- The tensions you haven't resolved and don't want an AI resolving for you.
+     "I don't know if I want three branches or one very profitable one." "I don't
+     know whether this stays in home services or moves into tech."
+
+     This is the highest-value section in the file and it is NOT optional, even at
+     seed depth. A tension written down stops the AI quietly assuming one side of
+     it in every piece of advice it gives you. An unwritten one gets assumed away.
+
+     If nothing comes to mind on day one, leave the heading with "_TBD_ — add when
+     one surfaces." They surface. -->
+
+- <the tension, and what you don't want assumed>
+
+---
 
 ## Never assume
 
