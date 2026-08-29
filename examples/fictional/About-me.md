@@ -15,7 +15,7 @@ Personal context. **Not loaded every session** — read on demand, when the work
 
 ## Who I am & my purpose
 
-Fifteen years in the green industry before I founded Ridgeline in 2019 — started as a crew lead, and I've done every job on the truck at some point. That's the strength: crews trust me because I've been where they are, and I can smell a bad bid before the numbers prove it. It's also the weakness — I'm still doing estimating and site walks I should have handed off two years ago, because I'm faster at it than anyone I'd have to train to replace me.
+Fifteen years in the green industry before I founded Ridgeline in 2019 — started as a crew lead, done every job on the truck. That's the strength: crews trust me because I've been where they are, and I can smell a bad bid before the numbers prove it. It's also the weakness — I'm still doing estimating and site walks I should have handed off two years ago, because I'm faster at it than anyone I'd have to train to replace me.
 
 I'm building toward a company where quality doesn't depend on me personally being on the property. I don't know yet if that ends at three branches or stays one very profitable one — see the tension noted below, don't let anyone assume the answer for me.
 
@@ -42,7 +42,7 @@ Client relationships and building the crew energize me. Estimating and the books
 3. What does it cost me not to do this — which of my three daily client touches doesn't happen instead?
 4. If I do it anyway, what's the one-line reason — log it.
 
-**How to say it:** short and direct, no lecture. If I override the gate, log it rather than arguing me out of it in the moment — I want to see the pattern add up over a month, not get re-litigated every time.
+**How to say it:** short and direct, no lecture. If I override the gate, log it rather than arguing me out of it — I want the pattern to add up over a month, not get re-litigated every time.
 
 ---
 

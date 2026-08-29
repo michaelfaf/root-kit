@@ -19,11 +19,13 @@ Where things live. Top-level folders and load-bearing files only, never leaf not
 
 - **`Clients/`** · per-property contract files, site notes, tier assignments — self-describing, live pricing stays in Aspire, not here
 - **`Operations/`** · crew schedules, equipment, safety, route notes — self-describing
-- **`Growth/`** · Greeley branch planning, new-business pipeline → `Growth/README.md`
+- **`Growth/`** · Greeley branch planning, new-business pipeline, competitive notes → `Growth/README.md`
 - **`Finance/`** · budgets, bookkeeper handoffs, monthly review notes — not linked from anywhere, deliberate
-- **`Team/`** · Marisol, Wes, and crew lead profiles, hiring pipeline → `Team/README.md`
+- **`Team/`** · Marisol, Wes, and crew lead profiles, hiring pipeline, onboarding checklists → `Team/README.md`
 - **`Meetings/`** · Monday ops meeting notes, Friday renewal review logs — dated, not linked
 - **`Archive/`** · discontinued lines — residential mowing, the design-build division — not linked, deliberate
+
+This is a working folder scheme, not a template someone else has to copy. It grew out of how Dana already organized the business before the vault existed — clients, the work, the growth bets, the money, the people. Nothing here is a C-suite function or a department; it's what a landscaping owner actually reaches for.
 
 ## Key routes
 
