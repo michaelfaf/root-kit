@@ -25,7 +25,7 @@ Business model, customers, pricing                      →  Business.md
 Where anything lives                                    →  Home.md
 ```
 
-Now the depth can be as deep as it needs to be, because nobody pays for it until it's needed. And your always-loaded file goes back to being 700 words.
+Now the depth can be as deep as it needs to be, because nobody pays for it until it's needed. And your always-loaded file goes back to being short enough that nobody minds it loading every turn.
 
 The thing that makes this work rather than just being tidy: **an AI reads a route.** It's not searching your notes and half-finding something. It's told, in a file it always has, that pricing questions live in a specific file. So the right file gets read on the right turn, and each fact has exactly one home.
 
@@ -69,11 +69,11 @@ Plus **the README rule**: a folder earns a README only when it's a navigation hu
 
 **Seven decisions.** Which file the router goes in. One workspace or personal split from shared. How much of the personal file to write now. Numbers in-file or pointers. README depth. Obsidian-native or plain markdown. Whether to restructure your folders (the recommendation is no — this kit deliberately doesn't impose a folder scheme). Each comes with trade-offs and a recommendation, and each gets recorded.
 
-**The interview.** This is the heart of it and it's most of the hour. Your AI asks and you talk — four blocks, business first, the personal one third, the map last. Nobody writes these files well from a blank page; the reason this works is that answering good questions is much easier than filling in a template. Some of the questions are ones nobody has asked you: *what are the three things an outsider gets wrong about your business that would make their advice useless?* *What decision from the last year would you take back, and what pattern caused it?* *How do you want to be pushed back on — before you've decided, or after?*
+**The interview.** This is the heart of it and it's most of the hour. Your AI asks and you talk — five blocks, business first, the personal one third, the map and a short working-together block last. Nobody writes these files well from a blank page; the reason this works is that answering good questions is much easier than filling in a template. Some of the questions are ones nobody has asked you: *what are the three things an outsider gets wrong about your business that would make their advice useless?* *What decision from the last year would you take back, and what pattern caused it?* *How do you want to be pushed back on — before you've decided, or after?*
 
 **Writing and wiring.** Your AI writes the four files from your answers, showing you each one before it moves on. Then it installs the router and checks the routing table line by line against the files that now exist. Nothing invented; anything you didn't say gets marked `_TBD_` and shown to you at the end.
 
-**The live test.** A real question of yours, answered with the routing narrated out loud. Then the cold-read test. Then one more question: *reading it back, what did we get wrong?* There's always one, and fixing it in front of you is how you learn the files are editable.
+**The live test.** A real question of yours, answered with the routing narrated out loud. Then the cold-read test — which has to be run by something that didn't sit through your interview. An AI that can spawn a fresh session runs it immediately; one that can't will write you a short `COLD-READ.md`, ask you to run it in a new chat or session, and leave the install marked incomplete until you report back. Either way the test is the acceptance check, and a failure means a file needs fixing, not that you did it wrong. Then one more question: *reading it back, what did we get wrong?* There's always one, and fixing it in front of you is how you learn the files are editable.
 
 ## Your job vs. your AI's
 

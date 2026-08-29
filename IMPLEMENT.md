@@ -51,12 +51,12 @@ Present each one conversationally: context, options with trade-offs, your recomm
 
 **Options:**
 - **A. `CLAUDE.md`** — read automatically by Claude Code and Claude Desktop projects. *Trade-off:* Claude-only; other tools ignore it.
-- **B. `AGENTS.md`** — the emerging cross-tool convention, read by Codex, Cursor, Amp, Copilot and others. *Trade-off:* Claude Code doesn't read it by default.
+- **B. `AGENTS.md` alone** — the emerging cross-tool convention, read by Codex, Cursor, Amp, Copilot and others. *Trade-off:* Claude Code doesn't read it by default. **Pick this only if the user has decided they will never use Claude tooling** — otherwise C costs one line and removes the question.
 - **C. Both** — `AGENTS.md` holds everything; `CLAUDE.md` is one line: *"Read AGENTS.md — it has your instructions for this repo."* *Trade-off:* two files, but one source of truth and no drift.
 - **D. The platform's custom-instructions box** — for chat-only tools with no file access. *Trade-off:* character-limited, so only the router fits; the depth files get pasted in on demand.
 - **E. Your platform's own always-apply mechanism** — Cursor `.cursor/rules/*.mdc` with `alwaysApply: true`, Cline `.clinerules/`, Windsurf `.windsurfrules`, or whatever yours is called. *Trade-off:* it genuinely always fires in that tool and nowhere else, so it's the most reliable option for one tool and invisible to every other.
 
-**Recommendation:** **C** if the scan found any file-capable coding agent, even one — it costs one extra line and it means the root survives you switching tools next year, which people do more often than they expect. **A** if they're certain they'll only ever use Claude tooling. **D** only if there's genuinely no file access.
+**Recommendation: C**, near-unconditionally. It costs one extra line and means the root survives switching tools next year, which people do more often than they expect. Take **A** only if they're certain they'll only ever use Claude tooling, **B** only if they're certain they never will, and **D** only if there's genuinely no file access. If they have no opinion, that's a C.
 
 **If your platform has a native always-apply mechanism (option E), take C *plus* E** — whichever tool you are. Put the router in `AGENTS.md`, and make the native rule file a single line: *"Read AGENTS.md at the start of every session."* The native mechanism is the thing that reliably fires; `AGENTS.md` is what keeps the content portable to the next tool. Never put the router's content in the native file — that locks it to one editor.
 
@@ -69,7 +69,7 @@ Present each one conversationally: context, options with trade-offs, your recomm
 **Options:**
 - **A. One workspace** — everything at one root: business, goals, projects, and the personal file. *Trade-off:* the moment anyone else needs the business context, they can reach the personal file too.
 - **B. Split** — a private workspace with `About-me.md` and personal projects, and a shared space holding `Business.md`, `Goals.md`, and the team-facing standing-instructions file. *Trade-off:* two roots to maintain, and business facts have exactly one home or they drift.
-- **C. Business-only** — no `About-me.md` at all. *Trade-off:* you lose the file that does the most to change how the AI actually behaves.
+- **C. Business-only** — no `About-me.md` at all. *Trade-off:* you lose the file that does the most to change how the AI actually behaves. **Right only when the workspace is purely a team asset** and the user keeps no personal AI context anywhere — rare, and worth confirming out loud rather than assuming.
 
 - **D. Business files exported to where the team already is** — `About-me.md` and the router stay in the private workspace; the business context gets copied or published into the tool the team actually uses (Notion, a wiki, a shared drive). *Trade-off:* two formats and a sync habit, but it's the only option that reaches a team who will never open your folder.
 
@@ -84,6 +84,13 @@ Present each one conversationally: context, options with trade-offs, your recomm
 > - **Nobody else can open it and there's no team** → **A**. Personal cloud sync (iCloud, Dropbox, a private repo) on the user's own account is **not** a reason to split.
 
 **If they genuinely don't know: A.** It's the cheaper mistake to fix, and `About-me.md` is one file to move.
+
+**If B — five things to settle, or you'll be improvising an architecture:**
+> 1. **Where the private root lives.** Ask. A `~/private-notes/` folder or a second vault; anywhere the shared space cannot reach. Record the absolute path in `STATUS.md`.
+> 2. **Which files go where.** Shared: `Business.md`, `Goals.md`, `Home.md`, and the router. Private: `About-me.md` and `install-notes.md`.
+> 3. **The push-back rules get promoted, the rest stays private.** The shared router still needs to know how this person wants to be argued with — put the three push-back bullets and the decision style directly in its "Rules & boundaries" section. The gate, the blind spots and the tensions stay in the private `About-me.md`. Losing the push-back rules to the split is the most common way a split install feels worse than no install.
+> 4. **How the router reaches the private file.** An absolute path in the routing row, with a note that it resolves only on the user's own machine. Anyone else's session simply won't follow it — which is the point.
+> 5. **Cold-read Q4 is untestable from the shared root.** A fresh session scoped to the shared workspace cannot read the private file. Say so in `COLD-READ.md`, and mark Q4 as "run from the private root, or skip" rather than letting it fail for the wrong reason.
 
 **Revisit trigger — one condition, and it's narrow:** come back to this decision only if the interview reveals that **the notes themselves live in, or sync to, a place another person can open.** A multi-user SaaS tool (their accounting system, their CRM, a team Notion) is *not* a trigger — `About-me.md` was never going to live there, and treating it as one makes this fire on every business and resolve to "no change," which just teaches you to skip it.
 
@@ -110,12 +117,12 @@ The thing to know going in: **`About-me.md` is what forces the split later.** It
 
 **Options:**
 - **A. Numbers in the file**, each with a verification date. *Trade-off:* they go stale, and a stale number stated confidently is worse than no number at all — you'll act on it.
-- **B. Pointers only** — the file describes the mechanics, and the AI pulls live figures from the CRM, accounting system, or spreadsheet. *Trade-off:* requires that the AI can actually reach that system, and every question costs a lookup.
+- **B. Pointers only** — no structure pinned either; the file just names where everything lives. *Trade-off:* the AI can't reason about the business without a lookup for every question. **Only right when the mechanics genuinely change as often as the numbers** — an early-stage business still rewriting how it charges. Most people who reach for B want C or D.
 - **C. Hybrid, AI-fetched** — targets and structural facts in the file; per-customer, per-month, and live actuals pointed at, and *you* pull them.
 - **D. Hybrid, human-fetched** — same split, but the file names the system as a source the **user** opens, because you can't reach it. *Trade-off:* the AI can't answer a live-number question alone; it tells them where to look.
 
 **Recommendation — read the condition, not the letter.** Ask one question the scan can't answer for you: *"Can I actually reach that system from here?"* Then:
-> - **A real system of record you can read** (an API, a synced export, a file on disk) → **C**.
+> - **A real system of record you can read** (an API, a synced export, a file on disk) → **C**. *If what you can read is a periodic export rather than the live system, say so every time you quote from it and stamp the export's date — a monthly CSV answered confidently in week five is exactly the stale-number failure option A warns about.*
 > - **A real system of record you cannot read** — Stripe, QuickBooks, a CRM behind a login, a Google Sheet you have no access to → **D**. *This is the common case for a small business, and it is not option A.* Pin structure and targets in-file with dates; name the system explicitly as a human-fetch source so neither of you mistakes a pinned number for a live one.
 > - **No system of record at all** — the numbers live in a spreadsheet nobody has opened since March → **A**, with disciplined verification dates, and say plainly that the dates are the only thing keeping the file honest.
 
@@ -143,7 +150,7 @@ The rule underneath: **pin what's structural, point at what's live.** How you ch
 - **B. Plain markdown** — `[text](relative/path.md)` links, no frontmatter. *Trade-off:* you lose Obsidian's graph view, backlinks, and property queries.
 - **C. Minimal hybrid** — three frontmatter keys (`type`, `read_first`, `updated`), plain relative links. *Trade-off:* the graph view is thinner than it could be.
 
-**Recommendation:** **A if the scan found a `.obsidian/` directory and the files stay in the vault** — the backlinks are a real part of why an Obsidian root works, and any competent AI resolves `[[Business.md]]` to the file of that name. **B otherwise.** Choose **C** if any of these files will ever be read outside the vault — pushed to a repo, shared with a teammate on a different tool, rendered on the web. Whichever you pick, be consistent: half-wikilinked files are the ones that break.
+**Recommendation:** **A if the scan found a `.obsidian/` directory and the files stay in the vault** — the backlinks are a real part of why an Obsidian root works, and any competent AI resolves `[[Business.md]]` to the file of that name. **B otherwise.** Choose **C** if any of these files will ever be read outside the vault — pushed to a repo, shared with a teammate on a different tool, rendered on the web. **An Obsidian vault that is also a git repo satisfies both A and C: C wins.** Wikilinks don't render on GitHub, and the moment someone reads these files there, half the routing looks broken. Whichever you pick, be consistent: half-wikilinked files are the ones that break.
 
 ### DP-7 — Do you restructure the folders too?
 
@@ -162,10 +169,10 @@ The workspace this kit came from organizes its top level by business function �
 
 **This is the heart of the kit.** Nobody writes these four files well from a blank page. You ask, they talk, you write.
 
-Open `INTERVIEW.md` and run it: four blocks (Business → Goals → About-me → Map), 15–25 minutes each, one question at a time, following up on anything generic. Every rule in that file is there because skipping it produces a file that reads like a template with the placeholders filled in.
+Open `INTERVIEW.md` and run it: five blocks (Business → Goals → About-me → Map → how you work together), one question at a time, following up on anything generic. Every rule in that file is there because skipping it produces a file that reads like a template with the placeholders filled in.
 
 Before you start, say three things out loud:
-1. **The budget** — roughly an hour if they do all four blocks, and they can stop after any one.
+1. **The budget** — roughly an hour and a quarter if they do all five blocks, and they can stop after any one.
 2. **The privacy line for Block C** — confirm the DP-2 decision before the personal questions, not after. If the file is going anywhere a teammate can reach, they need to know that before they answer.
 3. **That you'll show each file before saving it.** The first read is where they catch the thing you got backwards, and they will catch at least one.
 
@@ -285,21 +292,6 @@ The install isn't finished until it's been used on something real.
 
    Then tell the user which of A or B you recommend for their setup, and that route A is worth the extra minute.
 
-   Read only the standing-instructions file and whatever it routes to, then answer:
-   - What does this business do and who pays for it?
-   - What's the target this year and what's the priority this quarter?
-   - Name one thing an outsider would get wrong about this business.
-   - How does this person want to be pushed back on? *(Skip only if DP-2 or DP-3 = C — and record in `STATUS.md` that the personal layer is untested.)*
-   - Where would I find <a specific thing>? **Choose something whose answer is not the folder name** — "why did we lose that customer," "what did we decide about pricing," not "where are the meeting notes." A question answerable from the directory listing alone tests nothing.
-
-   Five clean answers with no prior context means the root works. **If a question can't be answered, the gap is in the file, not the reader** — go fix the file, then re-run. This test is the acceptance check for the whole install; don't declare it passed without running it.
-
-   **What is not a pass:** a partial answer; an answer you could only give because you remembered the interview; *"the files don't say"* about something the files were supposed to hold; or an answer assembled by reading a file the router doesn't actually route to. That last one is the common failure — it means the depth is fine and the routing table is broken, which is the half that matters.
-
-   **What IS a pass, and don't score it wrong:** *"that figure isn't in the files — it's in <the accounting system>, which the notes name as the place to look."* Under DP-4 = B, C or D that is the install working exactly as designed. Only score "the files don't say" as a failure when the file was supposed to hold the answer.
-
-   *Chat-only:* open a brand-new chat, paste only the router plus the file it points to, and ask the five questions there.
-
 4. **One thing that was wrong.** Ask them: reading it back, what did we get wrong? There is always one. Fix it now, while they're looking at the file — it teaches them the files are editable, which is most of whether they'll keep editing them.
 
 ---
@@ -314,7 +306,9 @@ The install isn't finished until it's been used on something real.
    - *"When I explain the same thing to an AI twice, it belongs in a root file."*
    - *"When a number in a file gets used, check its date."*
 5. **Set the review cadence.** Quarterly for `Goals.md` (priorities and statuses go stale fastest), twice a year for the rest. Put it wherever they'll actually see it.
-6. **Move `STATUS.md` and your interview notes into the user's workspace** — `STATUS.md` is the resume spine and the notes are the sole provenance record for four files. Both currently live in the kit clone, which a fresh session opened on their workspace cannot see. Put them somewhere the workspace can reach (a `root-kit-install/` subfolder is fine).
+6. **Move `STATUS.md` and your interview notes somewhere the workspace can reach** — `STATUS.md` is the resume spine and the notes are the sole provenance record for four files. Both currently live in the kit clone, which a fresh session cannot see. A `root-kit-install/` subfolder is fine.
+
+   > **Under DP-2 = B, split them, and think before you move anything.** `install-notes.md` *is* Block C — blind spots, the gate, the unresolved tensions. Moving it into the shared workspace hands a colleague the most private material in the install and undoes the decision you made in Phase 1. **The notes go to the private root. `STATUS.md` goes to the shared workspace with the Block C answers stripped out**, and a one-line stub says where the notes live. Same rule for any workspace another person can open, split or not: if it was too private for `About-me.md`, it's too private for the notes beside it.
 7. *Then* offer to delete the kit folder — **but only if Phase 4's cold-read test is `[x]`, not `[~]`.** While it's deferred, the scoring rules, the pass/fail criteria and the re-run loop live in `IMPLEMENT.md` inside the kit; delete it and the user has a test they can run and no way to interpret the result. If the check is still deferred, say so: *"keep this folder until you've run the cold read — the instructions for what to do with a failure are in it."* The files are installed either way; the kit was scaffolding.
 
 ---

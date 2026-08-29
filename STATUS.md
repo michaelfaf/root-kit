@@ -20,7 +20,7 @@
 | DP-1 | Standing-instructions file (A/B/C/D/E) | _pending_ | |
 | DP-2 | One workspace or split | _pending_ | |
 | DP-3 | About-me depth | _pending_ | |
-| DP-4 | Numbers: in-file / pointer / hybrid AI-fetch / hybrid human-fetch | _pending_ | |
+| DP-4 | Numbers: in-file / pointer / hybrid AI-fetch / hybrid human-fetch | _pending_ | *One line per system of record — e.g. "Metabase: C (export, stamp the date) · QuickBooks: D"* |
 | DP-5 | README depth | _pending_ | |
 | DP-6 | Obsidian-native or plain markdown | _pending_ | |
 | DP-7 | Folder scheme | _pending_ | |

@@ -24,7 +24,9 @@ The root of an AI second brain: a standing-instructions file that **routes**, pl
 
 1. Clone or download this repo.
 2. Open it with your assistant and say: **"Read IMPLEMENT.md and walk me through it."**
-3. It scans your setup, walks you through seven decisions, interviews you, writes your root files, wires them in, and proves the result with a cold-read test. Progress lives in `STATUS.md`, so a dead session doesn't cost you the hour.
+3. It scans your setup, walks you through seven decisions, interviews you, writes your root files, wires them in, and finishes with a cold-read test that checks a fresh session can actually answer questions from what got installed.
+
+**One thing to expect on the test:** it has to be run by something that didn't sit through your interview. Claude Code can spawn that itself and will run it on the spot. Codex, Cursor, Cline and Copilot generally can't — so they'll hand you a short `COLD-READ.md` to run yourself in a new session, and mark the install incomplete until you do. That's the honest behaviour, not a shortcut, but it does mean the last step may be five minutes of your own. Progress lives in `STATUS.md`, so a dead session doesn't cost you the hour.
 
 Recommended model: the most capable one you have, at high reasoning effort (Claude Fable 5 high, or Claude Opus high). The interview is the part that suffers most on a weaker model — the follow-up questions are where the good material comes from.
 
@@ -40,7 +42,7 @@ Read `INTERVIEW.md` and answer the questions into a document, then fill in `temp
 
 ## Time
 
-About an hour for all four interview blocks, plus fifteen minutes of decisions and setup. You can stop after any block — the files work half-built, and the personal one is *supposed* to start thin.
+About an hour and a quarter for all five interview blocks, plus fifteen minutes of decisions and setup. You can stop after any block — the files work half-built, and the personal one is *supposed* to start thin.
 
 ## What's in here
 
@@ -48,7 +50,7 @@ About an hour for all four interview blocks, plus fifteen minutes of decisions a
 |---|---|
 | `OVERVIEW.md` | The full explanation — read this first to understand the system before installing |
 | `IMPLEMENT.md` | The setup walkthrough: scan, seven decisions, interview, install, live test (written for your AI, readable by you) |
-| `INTERVIEW.md` | The question bank — the heart of the kit. Four blocks, 40 questions plus follow-ups, and the rules for asking them |
+| `INTERVIEW.md` | The question bank — the heart of the kit. Five blocks, 47 questions plus follow-ups, and the rules for asking them |
 | `STATUS.md` | Progress checklist — your AI ticks it off and records your decisions here |
 | `templates/` | The six file templates, annotated section by section with what belongs and what doesn't |
 | `examples/fictional/` | A complete filled-in set for an invented company — what "done" looks like |
@@ -59,17 +61,17 @@ About an hour for all four interview blocks, plus fifteen minutes of decisions a
 
 Your AI walks you through each with trade-offs and a recommendation:
 
-1. **Which file holds the router** — `CLAUDE.md`, `AGENTS.md`, both, or a custom-instructions box
+1. **Which file holds the router** — `CLAUDE.md`, `AGENTS.md`, both, a custom-instructions box, or your tool's own always-apply rule file
 2. **One workspace or split** — personal separate from anything a teammate can reach
 3. **How much of `About-me.md` to write now** — seed, full, or skip
-4. **Numbers in the file or pointers to where they live**
+4. **Numbers in the file, or pointers to where they live** — including the common case where the system exists but your AI can't reach it
 5. **README depth** — the three tests, everywhere, or nowhere
 6. **Obsidian-native or plain markdown**
 7. **Whether to restructure your folders** — the recommendation is no, and the kit explains why
 
 ## What you end up with
 
-- A standing-instructions file that routes instead of containing — typically 700–1,200 words
+- A standing-instructions file that routes instead of containing, kept deliberately small
 - Four root files holding the depth, written in your words, with nothing invented
 - A business file whose best section is the list of things outsiders get wrong about you
 - A personal file whose best section is how you want to be pushed back on

@@ -95,9 +95,10 @@ No separate voice file yet. Rules until there is one: direct, short sentences, n
 
 ## Long-term picture (personal)
 
-I don't know if I want three branches or one very profitable Fort Collins operation, and I flip-flop depending on who I talked to last — an EO-forum peer pushes scale, my bookkeeper pushes staying lean and paying it out. The 2029 picture in [Goals.md](Goals.md) is a working scenario, not a decision I've made. Hold both options open — don't assume growth is the goal just because it's the plan that's written down.
+The version of Ridgeline I'm building toward is one where I'm not on a truck and not writing bids — client relationships, the crew leads, and the decisions only I can make. Whether that's one branch or three is genuinely open (see below).
 
----
+I'd like to still be doing this at 55, which means the business has to stop depending on me being faster than everyone else at everything.
+
 
 ## Held, not solved
 

@@ -62,6 +62,13 @@ Facts to never get wrong:
 - **Tool preferences:** Aspire is the system of record for anything that changes weekly — pricing, property counts, schedules. **It is not connected to this workspace (DP-4 = D):** when a live figure is needed, say which screen in Aspire has it and ask Dana to pull it. Every number in these files is a dated snapshot, not current truth — check the date before using one.
 - **READMEs:** a folder earns one only if it's a real navigation hub, has a non-obvious purpose, or has conventions a newcomer would miss. Skip homogeneous leaf folders like `Meetings/` or `Archive/`. Guard: if every section would just restate the folder name and a directory listing, write nothing. Update when a folder's structure, purpose or conventions change — not on individual file edits.
 
+## Keeping these files true
+
+- When a session goes wrong in a way that's about me rather than the work → that's an `About-me.md` entry.
+- When I explain the same thing to an AI twice → it belongs in a root file.
+- When a number in these files gets used → check its date before acting on it. Anything from Aspire is a snapshot, not current truth.
+- **Review cadence:** `Goals.md` at each quarter close (its priorities go stale fastest); the other three every six months. Last reviewed: 2026-07-28.
+
 ## Before building
 
 Check `Growth/` and `Team/` for existing planning before proposing a new approach to either.

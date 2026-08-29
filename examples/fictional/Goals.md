@@ -39,14 +39,13 @@ Anything that adds properties without pulling Dana back into estimating gets a y
 
 > ⚠️ Statuses refreshed 2026-07-28. Full working detail → Monday ops meeting notes, `Meetings/`.
 
-**Dana (2):**
+**Dana (3):**
 1. **Out of estimating** — Wes trained and running all bids under $40K solo by 2026-09-30. *In progress — Wes runs bids alongside Dana, not yet solo, 2026-07-28.*
-2. **Contract-margin audit on every Anchor account**, checked against the 15%-plus target it should clear. *Not started 2026-07-28 — gates priority 4.*
+2. **Contract-margin audit on every Anchor account**, checked against the contribution each account actually returns — the enhancement floor is 15%, but contracts are judged on whether the account clears its share of overhead. *Not started 2026-07-28 — gates priority 4.*
 
 **Wes (1):**
 3. **Snow renewals signed by 2026-08-31 at 90%+ retention.** *On track — 61% signed, 2026-07-28.*
 
-**Dana (1):**
 4. **Greeley branch go/no-go by 2026-10-15.** *Blocked on priority 2.*
 
 **Marisol (1):**

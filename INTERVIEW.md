@@ -8,9 +8,9 @@
 
 ## How to run this
 
-**Four blocks, in this order.** A → Business. B → Goals. C → About-me. D → Map. Business first because it's the easiest to talk about and it warms up the harder ones. About-me third because by then they trust the process. The map last because it's derived, not confessed.
+**Five blocks, in this order.** A → Business. B → Goals. C → About-me. D → Map. E → how you and the AI work together. Business first because it's the easiest to talk about and it warms up the harder ones. About-me third because by then they trust the process. The map is derived rather than confessed, and E is five quick questions about working together — both are easy landings after C.
 
-**Budget:** 15–25 minutes per block. Say that up front. Offer the exit: *"We can do one block now and the rest another day — the files work half-built."* People who are told they can stop finish more often than people who aren't.
+**Budget:** 15–25 minutes for A, B and C; about five each for D and E. Say that up front. Offer the exit: *"We can do one block now and the rest another day — the files work half-built."* People who are told they can stop finish more often than people who aren't.
 
 ### The rules you follow
 
@@ -56,7 +56,9 @@
 10. **What have you deliberately stopped doing, and why?** *(This stops the AI enthusiastically proposing the thing they already killed. Get the reasoning, not just the decision.)*
 11. **Where do you lose?** The honest one. Which situation does a competitor win, and what does that tell you about where to compete?
 12. **Does your year have a shape?** Busy season, dead months, anything weather- or calendar-driven? What do you do in the trough? *(Feeds `Business.md` §5. If the answer is "no, it's steady," say so in the file — that's information too.)*
-13. **Which numbers do you actually watch, and who owns each one?** Not the targets — the instrument panel. *(Feeds the §6 table. If nobody owns a metric, write "unassigned"; an unowned metric is a finding.)*
+13. **Do your customers fall into tiers or bands** — by size, spend, or how you serve them? What changes between them? *(→ §2's tier table. If there are no tiers, say so in the file; "we treat everyone the same" is a real answer and stops the AI inventing a segmentation.)*
+14. **Walk me from "we win the work" to "we get paid" — the steps, and who owns each.** *(→ §2's lifecycle. This is the section that lets an AI answer operational questions without asking you, and it's usually four or five steps.)*
+15. **Which numbers do you actually watch, and who owns each one?** Not the targets — the instrument panel. *(Feeds the §6 table. If nobody owns a metric, write "unassigned"; an unowned metric is a finding.)*
 
 > **A note on question 4 and DP-4:** when they name a system of record, ask the follow-up the decision actually needs — ***"can I reach it from here, or is that one you'd have to open yourself?"*** Whether a system exists and whether *you* can read it are different facts, and DP-4 turns on the second one.
 
@@ -107,6 +109,22 @@
 11. **When you're stressed or overloaded, what do you actually do?** *(Sensitive. Offer the out: "Skip this if you'd rather." The ones who answer get the most out of the file, because you can name the pattern before they do.)*
 12. **What should I never assume about you?**
 13. **Anything unresolved you want held rather than solved?** *(The best entries in this file are the tensions someone hasn't settled — "I don't know if I want three branches or one profitable one." An AI that knows about the tension stops assuming one side of it.)*
+
+---
+
+## Block E — How we work together → the router's own sections
+
+*Short — five questions, five minutes. Say: "Last one, and it's about you and me rather than the business. These go in the file that loads every session."*
+
+**This block exists because the router has sections nothing else fills.** Editing rules, the decision filters and the operational pointers are three of its five sections, they're loaded on every single turn, and without these questions you'd be inventing them — in the file where inventing is least acceptable.
+
+1. **What should I be able to change without asking, and what always needs your sign-off?** Push for the grades, not a binary: a typo in a note, a rewrite of a page, a new file, anything that touches money or goes to another person. *(→ the router's "Editing rules". Without this you get a timid assistant or an unsupervised one, and you won't know which until it matters.)*
+2. **When you say yes to something, what are the two or three things you're actually checking?** *(→ the decision filters. If they can't name them, offer a guess drawn from their Block B answers and let them correct it — the correction is the answer. Never write filters they haven't confirmed out loud.)*
+3. **Is there anywhere a mistake would be expensive or hard to undo?** A live system, a customer-facing send, a shared file others depend on. *(→ the "never write without telling me" line. Ask it plainly; most people have exactly one and won't volunteer it.)*
+4. **Where do documents and plans go, and is there a naming convention I should follow?** *(→ "Operational pointers". One line each; skip anything they don't have.)*
+5. **Any tool I should reach for first — or one you'd rather I didn't use?** *(→ the tool-preference pointer. Also catches "don't put this in the cloud", which is worth knowing before you write anything.)*
+
+> **If they're out of patience:** questions 1 and 2 are the ones that matter. Ask those two, mark the rest `_TBD_`, and tell them the pointers fill in the first time something lands in the wrong place.
 
 ---
 

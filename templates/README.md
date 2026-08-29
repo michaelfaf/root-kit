@@ -8,7 +8,7 @@ Six templates. Every one is annotated with HTML comments explaining what the sec
 | `HOME.md` | `Home.md` at the workspace root | **DP-6** · **DP-7** (folder scheme — the map describes whatever scheme you keep) | Yes. Even a small workspace needs the Key Routes section, and the router needs somewhere to send "where is X" |
 | `BUSINESS.md` | `Business.md` at the workspace root | **DP-2** (one workspace or split) · **DP-4** (numbers in-file or pointers) | Yes, if there's a business. Skip for a purely personal workspace. |
 | `GOALS.md` | `Goals.md` at the workspace root | **DP-2** · **DP-4** | Yes |
-| `ABOUT-ME.md` | `About-me.md` — location decided by **DP-2** | **DP-2** (this is the file that forces the split) · **DP-3** (seed or full) | Yes — at seed depth by default |
+| `ABOUT-ME.md` | `About-me.md` — location decided by **DP-2** | **DP-2** (this is the file that forces the split) · **DP-3** (seed or full) | Yes — at seed depth by default, unless DP-2 or DP-3 = C |
 | `FOLDER-README.md` | A README in any folder that passes the three tests | **DP-5** (README depth) | No. It's a pattern applied on demand, not a file installed once. |
 
 ## Where the choices land

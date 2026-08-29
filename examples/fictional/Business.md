@@ -69,7 +69,7 @@ Grounds contracts: fixed monthly fee across 12 months, never per visit. Snow and
 
 > **Live numbers:** each account's actual rate lives in Aspire. No canonical price list here.
 
-**Margin mechanics:** crew wages are COGS; office staff and Dana's own comp are overhead — don't blur the two. Benchmark only against other W-2, self-performing operators, never brokers or subs showing 55%+ gross. History: 33% gross in 2024, ~38% in 2025 [bookkeeper, 2026 year-end close] — renewal pricing catching up to real labor cost, not volume. The lever that moves margin most: the 15% enhancement floor and snow retention.
+**Margin mechanics:** crew wages are COGS; office staff and Dana's own comp are overhead — don't blur the two. Benchmark only against other W-2, self-performing operators, never brokers or subs showing 55%+ gross. History: 33% gross in 2024, ~38% in 2025 [bookkeeper, 2026-01-31] — renewal pricing catching up to real labor cost, not volume. The lever that moves margin most: the 15% enhancement floor and snow retention.
 
 ---
 
