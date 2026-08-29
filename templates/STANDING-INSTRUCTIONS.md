@@ -5,7 +5,13 @@ Install as whatever your platform reads every session (DP-1).
 THE ONE RULE FOR THIS FILE: it routes, it does not contain.
 Anything that takes more than three lines to say lives in a depth file and gets a pointer here.
 This file is loaded into every single session — every word costs you context on every turn.
-Target length: 400-900 words. If it passes 1,200, something in it belongs in a depth file.
+
+LENGTH: aim for 700-1,000 words on a first install. A real install carries more than the
+skeleton below - the user's own merged rules, the README rule, the habits from Phase 5 -
+so landing near 1,000 is normal and is not a failure. Past ~1,500, start moving sections
+out: the test is not the word count, it is whether a line must be true on EVERY turn.
+(The live example in examples/live-vault/ is ~1,600 words and still almost pure routing -
+length earned by pointing at a lot, not by containing a lot.)
 
 Delete every comment block and every unused section before you install it.
 -->
@@ -26,10 +32,10 @@ Rules:
 Keep 6-12 lines. Past that, the table needs grouping, not more rows.
 -->
 
-- Coaching, behavioral, "am I being an idiot about this" → `ABOUT-ME.md`
-- Targets, priorities, what matters this quarter, cadence → `GOALS.md`
-- Business model, customers, pricing, expansion → `BUSINESS.md`
-- Where anything lives → `HOME.md`
+- Coaching, behavioral, "am I being an idiot about this" → `About-me.md`
+- Targets, priorities, what matters this quarter, cadence → `Goals.md`
+- Business model, customers, pricing, expansion → `Business.md`
+- Where anything lives → `Home.md`
 - <Your system of record — CRM, database, accounting> → <pointer, or "pull live, never cached">
 - <Project work> → that project's `STATUS.md` / `README.md`
 - <Add rows for the depth files you actually have>
@@ -93,12 +99,12 @@ Writing anything that goes out under my name — email, post, message, document 
 
 <!--
 The three or four facts that, if the AI gets them wrong, make every answer downstream wrong.
-NOT a summary of BUSINESS.md — a summary rots. These are the tripwires: the things an
+NOT a summary of Business.md — a summary rots. These are the tripwires: the things an
 outsider would reasonably assume that are false here. Two to four bullets, hard stop.
-Full model → BUSINESS.md.
+Full model → Business.md.
 -->
 
-<One line: what the business does.> Full model, customers, pricing → `BUSINESS.md`.
+<One line: what the business does.> Full model, customers, pricing → `Business.md`.
 
 Facts to never get wrong:
 - **<Tripwire 1>:** <the thing outsiders assume, and the correction>.

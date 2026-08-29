@@ -7,7 +7,7 @@ Written so an AI that reads only this file gives advice that fits your business 
 the generic version of your industry.
 
 WHAT IT IS NOT: a business plan, a pitch deck, or a dashboard. No live figures that change
-weekly (see the "live numbers" rule below). No aspirations — those are GOALS.md.
+weekly (see the "live numbers" rule below). No aspirations — those are Goals.md.
 
 THE TWO RULES THAT MAKE THIS FILE WORK:
  1. STRUCTURE STAYS, ACTUALS POINT. Pin the mechanics (how you charge, what counts as cost
@@ -26,7 +26,7 @@ Delete every comment block before you install.
 
 ---
 type: canonical-reference
-read_first: BUSINESS.md
+read_first: Business.md
 updated: <YYYY-MM-DD>
 ---
 
@@ -164,7 +164,7 @@ Canonical source for the model, customers, pricing, and expansion. The standing-
 
 ## 6. Targets & metrics
 
-<!-- The metrics you steer by and WHO OWNS each. Targets themselves live in GOALS.md;
+<!-- The metrics you steer by and WHO OWNS each. Targets themselves live in Goals.md;
      this table is the instrument panel, not the destination. -->
 
 | Metric | Owner | Why it's tracked |

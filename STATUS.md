@@ -17,10 +17,10 @@
 
 | # | Decision | Choice | Notes |
 |---|---|---|---|
-| DP-1 | Standing-instructions file | _pending_ | |
+| DP-1 | Standing-instructions file (A/B/C/D/E) | _pending_ | |
 | DP-2 | One workspace or split | _pending_ | |
 | DP-3 | About-me depth | _pending_ | |
-| DP-4 | Numbers in-file or pointers | _pending_ | |
+| DP-4 | Numbers: in-file / pointer / hybrid AI-fetch / hybrid human-fetch | _pending_ | |
 | DP-5 | README depth | _pending_ | |
 | DP-6 | Obsidian-native or plain markdown | _pending_ | |
 | DP-7 | Folder scheme | _pending_ | |
@@ -59,7 +59,8 @@
 
 ### Phase 4 — First live run
 - [ ] Real question answered, routing narrated
-- [ ] Cold-read test: all 5 questions answered from the root alone
+- [ ] Cold-read test run in a genuinely fresh context — OR `COLD-READ.md` written and handed to the user, and this marked DEFERRED in Blockers
+- [ ] All 5 questions answered from the root alone (Q4 skipped only if DP-2/DP-3 = C)
 - [ ] Gaps found by the cold-read test fixed in the files, test re-run
 - [ ] "What did we get wrong?" asked and the fix made
 
@@ -68,6 +69,7 @@
 - [ ] `_TBD_` list shown to the user
 - [ ] Three habits stated and written into the router
 - [ ] Review cadence set
+- [ ] `STATUS.md` + interview notes moved into the user's workspace (before any kit deletion)
 - [ ] This file fully ticked
 
 ## Open `_TBD_` items

@@ -21,7 +21,7 @@ Delete every comment block before you install.
 
 ---
 type: map
-read_first: HOME.md
+read_first: Home.md
 updated: <YYYY-MM-DD>
 ---
 
@@ -31,10 +31,10 @@ Where things live. Top-level folders and load-bearing files only, never leaf not
 
 ## Start here — root files
 
-- `<STANDING-INSTRUCTIONS>.md` · how the AI operates — read every session
-- `GOALS.md` · targets, priorities, cadence
-- `BUSINESS.md` · <the business> — model, customers, pricing
-- `ABOUT-ME.md` · coaching, behavioral, decision patterns
+- `<your standing-instructions file: CLAUDE.md or AGENTS.md, per DP-1>` · how the AI operates — read every session
+- `Goals.md` · targets, priorities, cadence
+- `Business.md` · <the business> — model, customers, pricing
+- `About-me.md` · coaching, behavioral, decision patterns
 - <`GUIDE.md` or similar, if you have one · the manual — how this workspace works. This page is the *map* (where things are); the guide is the *manual* (how they work).>
 
 ## Folders

@@ -17,8 +17,10 @@
 1. **One question at a time.** Two or three at most if they're a tight cluster. A wall of eight questions gets you eight one-word answers, which is worse than four questions with real answers.
 2. **Reflect back before moving on.** *"So the way you charge is X, and the part people get wrong is Y — have I got that?"* This catches your misreadings while they're cheap, and it makes them correct you, which is where the good detail comes from.
 3. **Follow up on anything generic.** "We give great service" is not an answer. Push once: *"What does a customer actually get from you that they wouldn't get from the next vendor? Give me the last time it happened."* One follow-up, then move on — you're interviewing, not interrogating.
-4. **Never invent.** If they don't answer something, the file gets `_TBD_` on that line and it goes in the wrap-up list. A root file's entire value is that it's true. A plausible guess in a root file is worse than a hole, because a hole gets filled and a guess gets believed.
-5. **Date everything they say a number about.** Not the date you write the file — the date they said it. `[owner, YYYY-MM-DD]`.
+4. **Never invent** — including when they ask you to. If they don't answer something, the file gets `_TBD_` on that line and it goes in the wrap-up list. A root file's entire value is that it's true. A plausible guess in a root file is worse than a hole, because a hole gets filled and a guess gets believed.
+
+   **They will ask.** Some version of *"just fill that one in with something reasonable"* comes up in most interviews, usually when they're tired. **Say no, and give them the cheaper path instead:** offer to turn it into a single question they can answer in one line, right now. *"Rather than me guessing — in three years, what are you doing on a Tuesday?"* People who won't write a Vision section will answer that in four words, and four true words beat a good paragraph you made up.
+5. **Date everything they say a number about.** Not the date you write the file — the date they said it. **One convention, everywhere:** `[source, YYYY-MM-DD]`, where source is the person's name for something they told you (`[Dana, 2026-06-02]`), or the system or document for anything else (`[the ops platform, 2026-06-02]`). Quarterly status lines in `Goals.md` carry the date of the last refresh the same way.
 6. **Write in their words, not yours.** If they said "we absorb the coordination burden," the file says that. Don't upgrade it into "value-added service integration." The whole point is that the file sounds like the person whose business it describes.
 7. **You are allowed to disagree.** If an answer contradicts one from ten minutes ago, say so and ask which is right. Contradictions found now are worth more than the entire rest of the interview.
 8. **Take notes as you go, in a file.** Don't hold twenty minutes of answers in conversation and hope. If a session dies mid-interview, the notes are what saves it.
@@ -40,6 +42,10 @@
 9. ***The one that matters most:*** **what are the three things an outsider gets wrong about your business that would make their advice useless?** *(If they stall: "What did the last consultant, banker, or AI tell you that was just wrong for you? What do you find yourself explaining more than once a month?" These become section 8, and section 8 is why the file exists.)*
 10. **What have you deliberately stopped doing, and why?** *(This stops the AI enthusiastically proposing the thing they already killed. Get the reasoning, not just the decision.)*
 11. **Where do you lose?** The honest one. Which situation does a competitor win, and what does that tell you about where to compete?
+12. **Does your year have a shape?** Busy season, dead months, anything weather- or calendar-driven? What do you do in the trough? *(Feeds `Business.md` §5. If the answer is "no, it's steady," say so in the file — that's information too.)*
+13. **Which numbers do you actually watch, and who owns each one?** Not the targets — the instrument panel. *(Feeds the §6 table. If nobody owns a metric, write "unassigned"; an unowned metric is a finding.)*
+
+> **A note on question 4 and DP-4:** when they name a system of record, ask the follow-up the decision actually needs — ***"can I reach it from here, or is that one you'd have to open yourself?"*** Whether a system exists and whether *you* can read it are different facts, and DP-4 turns on the second one.
 
 ---
 
@@ -54,7 +60,12 @@
 5. **Anything deferred?** What did you decide *not* to do this quarter, and when does it come back? *(Keep it listed. Deleted deferrals return as brilliant new ideas.)*
 6. **What's the cadence that has to happen no matter what?** Daily minimum, weekly ritual, monthly review.
 7. **What should I do when you're off pace on that cadence?** Say something at session start? Wait to be asked? *(This is an instruction to you, and most people have never been asked it.)*
-8. **Personal targets** — health, relationships, skills, whatever you're steering. Targets only; the context goes in the next block.
+8. **Personal targets.** Ask as four short prompts, not one compound question — a compound question gets one answer and leaves three holes:
+   - **Health** — anything you're steering?
+   - **Relationships / life outside work** — anything you're steering?
+   - **A skill or capability you're deliberately building this year?**
+   - **Self-management** — sleep, stress, focus, energy: anything you're trying to hold?
+   Targets only; the context goes in the next block. "Nothing right now" is a real answer — write it as *none this year*, not `_TBD_`, so nobody re-asks in March.
 9. **What would knock this year off course?** *(The useful answers are about their own behavior, not the market. If they only name market risks, ask: "And what's the way you'd do it to yourself?")*
 10. **Three years out — describe it in present tense.** Revenue, shape of the model, what your own role looks like.
 

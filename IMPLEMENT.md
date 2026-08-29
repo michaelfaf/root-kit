@@ -33,7 +33,7 @@ Before asking the user anything, find out what you're working with. Record findi
 3. **Where does the user's work live?** An Obsidian vault, a notes folder, a git repo of documents, a Drive folder. Look before you ask. If nothing is visible from where you're running, ask.
 4. **What's already at the root?** Read every existing instructions file, README, or notes-about-notes file **in full** before you write anything. You are merging into their conventions, not bulldozing them. If they already have a `CLAUDE.md` with rules in it, those rules survive — you're adding a router around them, not replacing them.
 5. **Is this Obsidian?** Look for a `.obsidian/` directory. It decides DP-6.
-6. **How many top-level folders?** Under about six and the root listing *is* the map — note it, it changes the DP-7 conversation and may make `Home.md` unnecessary.
+6. **How many top-level folders?** Note the count. **Write `Home.md` anyway** — even at four folders it carries the Key Routes section, which is the part people actually use, and the router needs somewhere to send "where is X." Skip it only if the user, told the trade-off, says they'd rather not have the file.
 
 **Chat-only fallback:** if you can't see their file system, you'll narrate and they'll create. Everything below still applies. `STATUS.md` lives in a note they paste back to you at the start of each session, and the four root files live wherever they keep documents. Say this out loud so they know what they're signing up for.
 
@@ -52,8 +52,11 @@ Present each one conversationally: context, options with trade-offs, your recomm
 - **B. `AGENTS.md`** — the emerging cross-tool convention, read by Codex, Cursor, Amp, Copilot and others. *Trade-off:* Claude Code doesn't read it by default.
 - **C. Both** — `AGENTS.md` holds everything; `CLAUDE.md` is one line: *"Read AGENTS.md — it has your instructions for this repo."* *Trade-off:* two files, but one source of truth and no drift.
 - **D. The platform's custom-instructions box** — for chat-only tools with no file access. *Trade-off:* character-limited, so only the router fits; the depth files get pasted in on demand.
+- **E. A native per-tool rule file** — Cursor's `.cursor/rules/*.mdc` with `alwaysApply: true`, or your platform's equivalent. *Trade-off:* it genuinely always fires in that tool and nowhere else, so it's the most reliable option for one tool and invisible to every other.
 
 **Recommendation:** **C** if the scan found any file-capable coding agent, even one — it costs one extra line and it means the root survives you switching tools next year, which people do more often than they expect. **A** if they're certain they'll only ever use Claude tooling. **D** only if there's genuinely no file access.
+
+**If the scan found Cursor specifically:** take **C *plus* E** — put the router in `AGENTS.md` and add a one-line always-apply `.mdc` that says *"Read AGENTS.md at the start of every session."* Cursor's own mechanism is the thing that reliably fires; `AGENTS.md` is what keeps the content portable to the next tool. Don't put the router content itself in the `.mdc`, or you've locked it to one editor.
 
 **Scope warning, all options:** if your platform's instructions file is workspace-scoped, it only fires when that workspace is open. Put it where the work lives, and tell the user which sessions will and won't see it. A user who thinks their rules are global and finds out they weren't loses trust in the whole system.
 
@@ -64,7 +67,11 @@ Present each one conversationally: context, options with trade-offs, your recomm
 - **B. Split** — a private workspace with `About-me.md` and personal projects, and a shared space holding `Business.md`, `Goals.md`, and the team-facing standing-instructions file. *Trade-off:* two roots to maintain, and business facts have exactly one home or they drift.
 - **C. Business-only** — no `About-me.md` at all. *Trade-off:* you lose the file that does the most to change how the AI actually behaves.
 
-**Recommendation:** **A if nobody else's AI will read this workspace; B if the scan found a shared, synced, or team-accessible location** (a shared Drive folder, a team repo, a vault that syncs to anyone else). Start at A if you're unsure — it's the cheaper mistake to fix, and `About-me.md` is one file to move.
+**Ask, don't infer.** The deciding fact is not visible to your scan — it lives in the user's head. Ask both:
+> 1. *"Will anyone else — a teammate, an assistant, a co-founder — ever point their AI at this folder?"*
+> 2. *"Is this folder inside anything that syncs or is shared?"* (iCloud Desktop, Dropbox, Google Drive, a team repo.) Check the path yourself if you can; a personal file in a synced folder is shared whether or not anyone intended it.
+
+**Recommendation:** **B if either answer is yes; A if both are no.** Start at A if they genuinely don't know — it's the cheaper mistake to fix, and `About-me.md` is one file to move. If the user says "whatever you recommend," ask the two questions first: this is not a decision you can take on their behalf without them.
 
 The thing to know going in: **`About-me.md` is what forces the split later.** It's the file that makes the system work and the file you can't share. When a teammate first needs the business context, that's the split, and it's a good problem — it means the root got used.
 
@@ -81,6 +88,8 @@ The thing to know going in: **`About-me.md` is what forces the split later.** It
 > 3. Skip question 4 of the Phase 4 cold-read test, and record in `STATUS.md` that the personal layer is not installed and therefore not tested.
 > 4. Drop the first of the three Phase 5 habits and keep the other two.
 
+**If A (the recommendation): three non-optional template sections have no interview question behind them** — `Current state`, `When I'm stressed or overwhelmed`, and `Never assume` come from Block C questions 10-12, which sit outside the seed. Stub all three with `_TBD_` and a one-line note saying they fill in as things happen. Do not delete them: they are the sections most likely to earn their keep in month two, and an empty heading with a reason attached is an invitation, where a missing heading is a decision the user never made.
+
 **Recommendation:** **A**, and this isn't hedging. The seed is enough to change AI behavior on day one — push-back rules and decision style do most of the work. The best entries in this file come from friction that hasn't happened yet: the gate that's actually worth having is the one written the week after you did the thing you keep doing. Set the habit instead: **when a session goes wrong in a way that's about you rather than the work, that's an `About-me.md` entry.** Tell the user that line explicitly; it's the whole retention mechanism.
 
 ### DP-4 — Does the file hold the numbers, or point at where they live?
@@ -88,9 +97,15 @@ The thing to know going in: **`About-me.md` is what forces the split later.** It
 **Options:**
 - **A. Numbers in the file**, each with a verification date. *Trade-off:* they go stale, and a stale number stated confidently is worse than no number at all — you'll act on it.
 - **B. Pointers only** — the file describes the mechanics, and the AI pulls live figures from the CRM, accounting system, or spreadsheet. *Trade-off:* requires that the AI can actually reach that system, and every question costs a lookup.
-- **C. Hybrid** — targets and structural facts in the file; per-customer, per-month, and live actuals pointed at.
+- **C. Hybrid, AI-fetched** — targets and structural facts in the file; per-customer, per-month, and live actuals pointed at, and *you* pull them.
+- **D. Hybrid, human-fetched** — same split, but the file names the system as a source the **user** opens, because you can't reach it. *Trade-off:* the AI can't answer a live-number question alone; it tells them where to look.
 
-**Recommendation:** **C**, conditioned on the scan: if you found a real system of record the AI can read, point at it for actuals and keep the structure in-file. If there is no such system — the numbers live in a spreadsheet nobody's opened since March — then it's **A** with disciplined verification dates, and say plainly that the dates are the only thing keeping the file honest.
+**Recommendation — read the condition, not the letter.** Ask one question the scan can't answer for you: *"Can I actually reach that system from here?"* Then:
+> - **A real system of record you can read** (an API, a synced export, a file on disk) → **C**.
+> - **A real system of record you cannot read** — Stripe, QuickBooks, a CRM behind a login, a Google Sheet you have no access to → **D**. *This is the common case for a small business, and it is not option A.* Pin structure and targets in-file with dates; name the system explicitly as a human-fetch source so neither of you mistakes a pinned number for a live one.
+> - **No system of record at all** — the numbers live in a spreadsheet nobody has opened since March → **A**, with disciplined verification dates, and say plainly that the dates are the only thing keeping the file honest.
+
+**If the user says "whatever you recommend," the answer is whichever of C/D/A the condition above selects for their scan** — never a default letter. Say which one you took and why.
 
 The rule underneath: **pin what's structural, point at what's live.** How you charge is structural. What this customer pays is live. Your quarterly target is structural for the quarter. Last month's revenue is live.
 
@@ -161,6 +176,8 @@ Then the deliberate duplication: **copy the two or three most important lines fr
 
 Two or three, hard stop. A router carrying eight tripwires has stopped routing and started containing.
 
+**The duplication rule, for everything else:** when a fact could sit in two depth files, it lives in the one that **owns the domain**, and the other one links to it. Targets are owned by `Goals.md` — `Business.md`'s TL;DR names them in a clause and points. A lost customer is owned by `Business.md` (competitive limit); `Goals.md` may cite it as a risk, by reference. The two-to-three tripwires in the router are the *only* copied text in the system. Everything else is a pointer, or it will drift.
+
 Reference set: `examples/fictional/` shows all five files completed for an invented company. `examples/live-vault/` has two real ones, unedited, from the workspace this kit was extracted from.
 
 ### 3b — Wire the router
@@ -175,7 +192,9 @@ Then say the scope out loud one more time: which sessions will read this file, a
 
 Don't sweep the whole workspace writing READMEs. Apply the rule when a folder next changes. Put the rule itself in the router — the "Operational pointers" section of the template has the line — and keep `templates/FOLDER-README.md` where the AI can find it.
 
-If a folder passes the three tests *today* and obviously needs one, write that one. Usually there's one. Rarely three.
+If a folder passes the three tests *today* and obviously needs one, write that one. Usually there's one. Rarely three. **Often zero — that's a pass, not a failure.**
+
+If a folder has a real gotcha but is on the skip list (an archive nobody should touch, a synced export), the gotcha doesn't vanish: put it in the router's "Operational pointers" and in that folder's line in `Home.md`. A convention with nowhere to live ends up nowhere.
 
 ---
 
@@ -185,12 +204,18 @@ The install isn't finished until it's been used on something real.
 
 1. **Ask the user for a live question** — something actually on their plate, ideally one where the right answer depends on a fact in one of the new files. A pricing question, a "should I take this on" question, a priority call.
 2. **Answer it, out loud about your routing:** which file you read and why. They need to see the routing table work, once, or they won't trust it.
-3. **The cold-read test.** Start a fresh context — a new session, a subagent, or clear the conversation. Read only the standing-instructions file and whatever it routes to, then answer:
+3. **The cold-read test.** This is the acceptance check for the whole install, and it has to be run by something that did **not** sit through the interview.
+
+   **Pick your tier before you start:**
+   > - **You can spawn a subagent or a genuinely fresh context** → run it yourself, now.
+   > - **You cannot** (no subagents, and you ran the interview, so you can't un-remember it) → **do not fake it.** Write `COLD-READ.md` into the workspace containing the five questions below, the exact list of files a reader is allowed to open (the router, and only what it routes to), and a one-line instruction: *"Paste this into a brand-new chat with no history. Report which questions it could not answer."* Mark the check **DEFERRED — awaiting user run** in `STATUS.md` → Blockers, tell the user the install is not complete until they report back, and tell them what to do with the result: any question that fails is a gap in the files, and they should bring it back to you to fix.
+
+   Read only the standing-instructions file and whatever it routes to, then answer:
    - What does this business do and who pays for it?
    - What's the target this year and what's the priority this quarter?
    - Name one thing an outsider would get wrong about this business.
    - How does this person want to be pushed back on? *(Skip only if DP-2 or DP-3 = C — and record in `STATUS.md` that the personal layer is untested.)*
-   - Where would I find <a thing in the workspace>?
+   - Where would I find <a specific thing>? **Choose something whose answer is not the folder name** — "why did we lose that customer," "what did we decide about pricing," not "where are the meeting notes." A question answerable from the directory listing alone tests nothing.
 
    Five clean answers with no prior context means the root works. **If a question can't be answered, the gap is in the file, not the reader** — go fix the file, then re-run. This test is the acceptance check for the whole install; don't declare it passed without running it.
 
@@ -212,7 +237,8 @@ The install isn't finished until it's been used on something real.
    - *"When I explain the same thing to an AI twice, it belongs in a root file."*
    - *"When a number in a file gets used, check its date."*
 5. **Set the review cadence.** Quarterly for `Goals.md` (priorities and statuses go stale fastest), twice a year for the rest. Put it wherever they'll actually see it.
-6. Offer to delete the kit folder. The files are installed; the kit was scaffolding.
+6. **Move `STATUS.md` and your interview notes into the user's workspace** — `STATUS.md` is the resume spine and the notes are the sole provenance record for four files. Both currently live in the kit clone, which a fresh session opened on their workspace cannot see. Put them somewhere the workspace can reach (a `root-kit-install/` subfolder is fine).
+7. *Then* offer to delete the kit folder. The files are installed; the kit was scaffolding — but never delete it before step 6, or you delete your own resume mechanism.
 
 ---
 
@@ -220,6 +246,7 @@ The install isn't finished until it's been used on something real.
 
 - **A capability is missing** (no file access, no shell, no subagents) → take the nearest degradation path in the phase you're in. Chat-only means narrate-and-they-create; no subagents means the cold-read test runs in a fresh chat instead. Never dead-end on a missing capability.
 - **They already have a big instructions file** → don't rewrite it. Add the routing table at the top, move anything longer than three lines into the depth file that should own it, and leave a pointer behind. Show them the diff before saving.
+- **Their existing file isn't named `CLAUDE.md` or `AGENTS.md`** (`ai-instructions.md`, `notes-for-chatgpt.md`, whatever) → their rules move *into* the new router verbatim, and the old file gets **stubbed down to a single pointer line**, not left as a second copy. Two instruction files with overlapping rules is worse than either one alone, because nobody knows which one lost.
 - **They stall on the interview** — bored, drained, or "I don't know" three times running → stop. Write what you have, mark the rest `_TBD_`, and book block two for another day. A half-built root is useful; a resented one gets abandoned.
 - **An answer contradicts an earlier answer** → ask, don't reconcile it yourself. Contradictions surfaced during the interview are worth more than everything else you collect.
 - **They ask you to fill in a gap "with something reasonable"** → don't. Offer instead to draft it as a question they can answer in one line. The value of a root file is that every line in it is true.

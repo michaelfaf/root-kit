@@ -37,7 +37,7 @@ Delete every comment block before you install.
 
 ---
 type: canonical-reference
-read_first: ABOUT-ME.md
+read_first: About-me.md
 updated: <YYYY-MM-DD>
 ---
 
@@ -45,7 +45,7 @@ updated: <YYYY-MM-DD>
 
 Personal context. **Not loaded every session** — read on demand, when the work is about me directly: coaching, behavioral patterns, hard calls, life decisions.
 
-> **Related:** `<STANDING-INSTRUCTIONS>.md` (operating context) · `GOALS.md` (targets, including personal) · `BUSINESS.md` (the business)
+> **Related:** `<your standing-instructions file: CLAUDE.md or AGENTS.md, per DP-1>` (operating context) · `Goals.md` (targets, including personal) · `Business.md` (the business)
 > **Last verified:** <YYYY-MM-DD> — numbers and life-state drift. Check the date before coaching off them.
 
 ---
@@ -193,7 +193,7 @@ Delete the ones you don't want; don't leave empty headings, they invite filler.
 ## Never assume
 
 <!-- The short list of things people (and AIs) consistently get wrong about you. The
-     mirror of BUSINESS.md section 8, for the person instead of the company. -->
+     mirror of Business.md section 8, for the person instead of the company. -->
 
 - <>
 - <>

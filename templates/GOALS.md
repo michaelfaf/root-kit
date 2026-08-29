@@ -17,13 +17,13 @@ Delete every comment block before you install.
 
 ---
 type: canonical-reference
-read_first: GOALS.md
+read_first: Goals.md
 updated: <YYYY-MM-DD>
 ---
 
 # Goals
 
-> **Related:** `<STANDING-INSTRUCTIONS>.md` (operating context) · `ABOUT-ME.md` (personal context) · `BUSINESS.md` (the model)
+> **Related:** `<your standing-instructions file: CLAUDE.md or AGENTS.md, per DP-1>` (operating context) · `About-me.md` (personal context) · `Business.md` (the model)
 >
 > **Weekly progress is not captured here** — it lives in <where>. This file is target state only.
 
@@ -128,7 +128,7 @@ back as a "great new idea" next quarter.
 
 ## Personal goals
 
-<!-- Targets only. The person, the context, the patterns behind them → ABOUT-ME.md.
+<!-- Targets only. The person, the context, the patterns behind them → About-me.md.
      "Targets here, person there." Keep the split clean or both files bloat. -->
 
 - **Health:** <target>
@@ -136,7 +136,7 @@ back as a "great new idea" next quarter.
 - **Skills:** <the capability gap you're closing this year>
 - **Self-management:** <target>
 
-Context behind each → `ABOUT-ME.md`.
+Context behind each → `About-me.md`.
 
 ---
 

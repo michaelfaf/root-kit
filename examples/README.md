@@ -10,13 +10,13 @@ Read it if you want to see: how the router stays short while routing to everythi
 
 Ridgeline is nothing like the business this kit came from, which is the point. If the shape survives being ported onto a company with W-2 crews, seasonal snow contracts, and a completely different folder scheme, the shape is the portable part.
 
-| File | Words |
+| File | What it shows |
 |---|---|
-| `AGENTS.md` | the router |
-| `Home.md` | the map |
-| `Business.md` | the model, including section 8 |
-| `Goals.md` | targets and this quarter |
-| `About-me.md` | the owner, at "seed plus a bit" depth |
+| `AGENTS.md` | the router — 722 words, almost all of it pointing |
+| `Home.md` | the map, at the depth-2 ceiling |
+| `Business.md` | the model, including section 8's tripwires |
+| `Goals.md` | targets, this quarter's priorities with owners and done-lines |
+| `About-me.md` | the owner, written past seed depth — a full first pass, including the sections a seed install would stub |
 
 ## `live-vault/` — what a real one looks like after a year
 

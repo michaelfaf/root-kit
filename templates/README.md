@@ -5,7 +5,7 @@ Six templates. Every one is annotated with HTML comments explaining what the sec
 | Template | Installs as | Gated by | Always installed? |
 |---|---|---|---|
 | `STANDING-INSTRUCTIONS.md` | `CLAUDE.md` / `AGENTS.md` / custom-instructions box | **DP-1** (which file your platform reads) · **DP-6** (link + frontmatter style) | **Yes.** Nothing works without it. |
-| `HOME.md` | `Home.md` at the workspace root | **DP-6** · **DP-7** (folder scheme — the map describes whatever scheme you keep) | Yes, unless the workspace is small enough that the root listing *is* the map (under ~6 top-level folders) |
+| `HOME.md` | `Home.md` at the workspace root | **DP-6** · **DP-7** (folder scheme — the map describes whatever scheme you keep) | Yes. Even a small workspace needs the Key Routes section, and the router needs somewhere to send "where is X" |
 | `BUSINESS.md` | `Business.md` at the workspace root | **DP-2** (one workspace or split) · **DP-4** (numbers in-file or pointers) | Yes, if there's a business. Skip for a purely personal workspace. |
 | `GOALS.md` | `Goals.md` at the workspace root | **DP-2** · **DP-4** | Yes |
 | `ABOUT-ME.md` | `About-me.md` — location decided by **DP-2** | **DP-2** (this is the file that forces the split) · **DP-3** (seed or full) | Yes — at seed depth by default |
@@ -15,8 +15,8 @@ Six templates. Every one is annotated with HTML comments explaining what the sec
 
 - **DP-1 → filename.** Same content either way. If both `CLAUDE.md` and `AGENTS.md` are in play, `AGENTS.md` holds the router and `CLAUDE.md` is one line: *"Read AGENTS.md — it has your instructions for this repo."*
 - **DP-2 → location.** One workspace: all five at the root. Split: `Business.md` and `Goals.md` in the shared space, `About-me.md` in the private one, and the shared standing-instructions file routes to the business files only.
-- **DP-3 → length of `ABOUT-ME.md`.** Seed = the four non-optional sections. Full = every section including the optional block.
-- **DP-4 → what goes in the number-shaped slots.** In-file: the figure plus a verification date. Pointer: a line naming the system of record and how to pull it. Hybrid (recommended): targets and structural facts in-file, live actuals pointed at.
+- **DP-3 → length of `ABOUT-ME.md`.** Seed = Block C questions 1-9; the three sections fed by Q10-12 (`Current state`, `When I'm stressed`, `Never assume`) get stubbed with `_TBD_`, not deleted. Full = every section including the optional block.
+- **DP-4 → what goes in the number-shaped slots.** In-file (A): the figure plus a verification date. Pointer (B): a line naming the system and how to pull it. Hybrid C: structure in-file, actuals fetched by the AI. Hybrid D: structure in-file, actuals named as a source the *user* opens. C and D are the same file; they differ only in who does the fetching, so say which in the line itself.
 - **DP-5 → whether `FOLDER-README.md` gets used at all.** The three tests, README-everywhere, or nothing.
 - **DP-6 → frontmatter and links.** Obsidian: keep the frontmatter blocks, use `[[wikilinks]]`. Plain markdown: delete the frontmatter, use `[text](relative/path.md)`.
 - **DP-7 → what `HOME.md`'s folder list contains.** The template describes whatever scheme you already have. This kit does not restructure your folders.
