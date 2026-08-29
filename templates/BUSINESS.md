@@ -194,9 +194,10 @@ correct by hand, in every session, forever.
 Find them by asking: what did the last consultant/advisor/AI get wrong about us?
 What do I find myself explaining more than once a month?
 
-The two or three most important also get copied verbatim into the standing-instructions
-file, because they must be true in every session without this file being read. That is
-the only duplication in the whole system, and it's deliberate.
+The two or three most important also get copied up into the standing-instructions file —
+compressed to one line each, not pasted whole; see the fictional example. They must be
+true in every session without this file being read. That is the only duplication in the
+whole system, and it's deliberate.
 -->
 
 - **<Rule>:** <the assumption, and the correction>.

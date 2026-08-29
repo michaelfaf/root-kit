@@ -38,7 +38,7 @@ Keep 6-12 lines. Past that, the table needs grouping, not more rows.
 - Targets, priorities, what matters this quarter, cadence → `Goals.md`
 - Business model, customers, pricing, expansion → `Business.md`
 - Where anything lives → `Home.md`
-- <What system 1 owns — e.g. money, invoices, payroll> → <System 1>. <Who fetches: "I pull it live" (DP-4=C) or "you open it; I'll say which screen" (DP-4=D)>
+- <What system 1 owns — e.g. money, invoices, payroll> → <System 1>. <Who fetches — one of three: "I pull it live" (DP-4=C, live access) · "I read the export at <path>, dated <date>, always quoted as a snapshot" (DP-4=C via a periodic export) · "you open it; I'll tell you which screen" (DP-4=D)>
 - <What system 2 owns — e.g. customers, orders, hours> → <System 2>. <Who fetches>
 <!-- ONE ROW PER SYSTEM. Most businesses have two or three with different truth
      domains — accounting in one, customers in another. Cramming them into a single
@@ -108,7 +108,7 @@ Writing anything that goes out under my name — email, post, message, document 
 <!--
 The three or four facts that, if the AI gets them wrong, make every answer downstream wrong.
 NOT a summary of Business.md — a summary rots. These are the tripwires: the things an
-outsider would reasonably assume that are false here. Two to four bullets, hard stop.
+outsider would reasonably assume that are false here. Two or three bullets, hard stop — the same number IMPLEMENT's Phase 3a asks you to copy up.
 Full model → Business.md.
 -->
 

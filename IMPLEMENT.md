@@ -99,7 +99,7 @@ The thing to know going in: **`About-me.md` is what forces the split later.** It
 ### DP-3 — How much of `About-me.md` to write now?
 
 **Options:**
-- **A. Seed** — 20 minutes: purpose, strengths, blind spots, how to push back, decision style, numbers fluency. **Block C questions 1–9, plus question 13** (the unresolved tensions — short, and the highest-value answer in the block). *Trade-off:* thin at first; three sections are stubs.
+- **A. Seed** — 20–25 minutes: **Block C questions 1–13.** Purpose, strengths, blind spots, how to push back, decision style, numbers fluency, current state, failure modes, what never to assume, and the unresolved tensions. *Trade-off:* thin in the optional sections, but every non-optional section gets a real answer.
 - **B. Full** — the whole of Block C plus the optional sections, in one sitting. Budget two hours and expect it to be draining. *Trade-off:* long, and half of what you write on day one is guesswork about yourself.
 - **C. Skip for now.** *Trade-off:* the AI advises a generic person in your situation instead of you, which is most of what you were trying to fix.
 
@@ -109,7 +109,7 @@ The thing to know going in: **`About-me.md` is what forces the split later.** It
 > 3. Skip question 4 of the Phase 4 cold-read test, and record in `STATUS.md` that the personal layer is not installed and therefore not tested.
 > 4. Drop the first of the three Phase 5 habits and keep the other two.
 
-**If A (the recommendation): three non-optional template sections have no interview question behind them** — `Current state`, `When I'm stressed or overwhelmed`, and `Never assume` come from Block C questions 10-12, which sit outside the seed. (`Held, not solved` is *inside* the seed — ask question 13.) Stub all three with `_TBD_` and a one-line note saying they fill in as things happen. Do not delete them: they are the sections most likely to earn their keep in month two, and an empty heading with a reason attached is an invitation, where a missing heading is a decision the user never made.
+**Q10–12 are inside the seed on purpose.** They feed `Current state`, `When I'm stressed or overwhelmed` and `Never assume` — three non-optional sections — and they take about three minutes between them. If the user genuinely won't answer one, stub it with `_TBD_` and a line saying it fills in as things happen; never delete the heading, because an empty heading with a reason is an invitation and a missing one is a decision they never made.
 
 **Recommendation:** **A**, and this isn't hedging. The seed is enough to change AI behavior on day one — push-back rules and decision style do most of the work. The best entries in this file come from friction that hasn't happened yet: the gate that's actually worth having is the one written the week after you did the thing you keep doing. Set the habit instead: **when a session goes wrong in a way that's about you rather than the work, that's an `About-me.md` entry.** Tell the user that line explicitly; it's the whole retention mechanism.
 
@@ -150,7 +150,9 @@ The rule underneath: **pin what's structural, point at what's live.** How you ch
 - **B. Plain markdown** — `[text](relative/path.md)` links, no frontmatter. *Trade-off:* you lose Obsidian's graph view, backlinks, and property queries.
 - **C. Minimal hybrid** — three frontmatter keys (`type`, `read_first`, `updated`), plain relative links. *Trade-off:* the graph view is thinner than it could be.
 
-**Recommendation:** **A if the scan found a `.obsidian/` directory and the files stay in the vault** — the backlinks are a real part of why an Obsidian root works, and any competent AI resolves `[[Business.md]]` to the file of that name. **B otherwise.** Choose **C** if any of these files will ever be read outside the vault — pushed to a repo, shared with a teammate on a different tool, rendered on the web. **An Obsidian vault that is also a git repo satisfies both A and C: C wins.** Wikilinks don't render on GitHub, and the moment someone reads these files there, half the routing looks broken. Whichever you pick, be consistent: half-wikilinked files are the ones that break.
+**Recommendation:** **A if the scan found a `.obsidian/` directory and the files stay in the vault** — the backlinks are a real part of why an Obsidian root works, and any competent AI resolves `[[Business.md]]` to the file of that name. **B otherwise.** Choose **C** if any of these files will ever be read outside the vault — pushed to a repo, shared with a teammate on a different tool, rendered on the web. **Any commitment to read these files outside the vault forces C, and C beats A whenever both fire.** A git repo is the common case, but so are: a DP-2 = D export into a team tool, publishing anywhere, or a teammate on a different editor. If you took "A now, D later" at DP-2, you have already committed — take C today rather than rewriting every link when the habit lands.
+
+**One cost to name out loud before choosing C in an Obsidian vault:** the four root files will link differently from every other note, so they sit thinner in the graph view and don't backlink the way the rest of the vault does. (Check `.obsidian/app.json` — if `useMarkdownLinks` is already `true`, there's no inconsistency and C is free.) Wikilinks don't render on GitHub, so the trade is graph richness now against broken-looking routing the first time anyone reads the files elsewhere. Whichever you pick, be consistent: half-wikilinked files are the ones that break.
 
 ### DP-7 — Do you restructure the folders too?
 
@@ -270,6 +272,9 @@ The install isn't finished until it's been used on something real.
    5. [ONE SPECIFIC QUESTION ABOUT THIS BUSINESS — pick something whose answer is
       NOT guessable from a folder name. "Why did we stop doing X, and is that
       settled?" works. "Where are the meeting notes?" does not.]
+      **Swap this one if you like** — replace it with whatever you personally most
+      doubt these files can answer. That's the highest-value question on the list
+      and you know it better than I do.
 
    ## Scoring
 
@@ -286,8 +291,10 @@ The install isn't finished until it's been used on something real.
 
    ## What to do with the result
 
-   Any real failure is a gap in the files, not in the reader. Bring it back and
-   we'll fix the file — usually it's the routing table, not the depth.
+   Any real failure is a gap in the files, not in the reader. Bring it back **in a
+   session where this kit folder is still present** — the scoring rules and the
+   repair steps live in its `IMPLEMENT.md`, which is why you were told to keep it.
+   Usually the fix is the routing table, not the depth.
    ```
 
    Then tell the user which of A or B you recommend for their setup, and that route A is worth the extra minute.

@@ -45,6 +45,7 @@
 - [ ] Block B — Goals
 - [ ] Block C — About me
 - [ ] Block D — Map
+- [ ] Block E — How we work together (editing rules, decision filters, operational pointers)
 - [ ] Notes checked for contradictions, generic answers, undated numbers, holes
 
 ### Phase 3 — Write and wire
@@ -61,7 +62,7 @@
 ### Phase 4 — First live run
 - [ ] Real question answered, routing narrated
 - [ ] Cold-read test run in a genuinely fresh context — OR `COLD-READ.md` written and handed to the user, and this marked DEFERRED in Blockers
-- [ ] All 5 questions answered from the root alone (Q4 skipped only if DP-2/DP-3 = C) — mark `[~]` if the test is deferred
+- [ ] All 5 questions answered from the root alone (Q4 skipped if DP-2/DP-3 = C; if DP-2 = B, run it from the private root or mark it skipped) — mark `[~]` if the test is deferred
 - [ ] Gaps found by the cold-read test fixed in the files, test re-run — mark `[~]` if the test is deferred
 - [ ] "What did we get wrong?" asked and the fix made
 

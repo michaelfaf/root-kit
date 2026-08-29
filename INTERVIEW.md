@@ -55,10 +55,12 @@
 9. ***The one that matters most:*** **what are the three things an outsider gets wrong about your business that would make their advice useless?** *(If they stall: "What did the last consultant, banker, or AI tell you that was just wrong for you? What do you find yourself explaining more than once a month?" These become section 8, and section 8 is why the file exists.)*
 10. **What have you deliberately stopped doing, and why?** *(This stops the AI enthusiastically proposing the thing they already killed. Get the reasoning, not just the decision.)*
 11. **Where do you lose?** The honest one. Which situation does a competitor win, and what does that tell you about where to compete?
-12. **Does your year have a shape?** Busy season, dead months, anything weather- or calendar-driven? What do you do in the trough? *(Feeds `Business.md` §5. If the answer is "no, it's steady," say so in the file — that's information too.)*
-13. **Do your customers fall into tiers or bands** — by size, spend, or how you serve them? What changes between them? *(→ §2's tier table. If there are no tiers, say so in the file; "we treat everyone the same" is a real answer and stops the AI inventing a segmentation.)*
-14. **Walk me from "we win the work" to "we get paid" — the steps, and who owns each.** *(→ §2's lifecycle. This is the section that lets an AI answer operational questions without asking you, and it's usually four or five steps.)*
-15. **Which numbers do you actually watch, and who owns each one?** Not the targets — the instrument panel. *(Feeds the §6 table. If nobody owns a metric, write "unassigned"; an unowned metric is a finding.)*
+12. **The formal record** — legal entity name, company number if you have one, registered address, trading name if it differs. *(→ §0. Ten seconds, and it stops the AI guessing at your legal name on anything that matters. Skip it if you'd rather it wasn't in a file.)*
+13. **If you had to say what you are in one line, out loud, to another business owner — what's the line?** *(→ §4's positioning. Not the uniques and not the elevator pitch; the sentence you'd actually say. If they give you three, ask which one they'd say to a stranger in a lift.)*
+14. **Does your year have a shape?** Busy season, dead months, anything weather- or calendar-driven? What do you do in the trough? *(Feeds `Business.md` §5. If the answer is "no, it's steady," say so in the file — that's information too.)*
+15. **Do your customers fall into tiers or bands** — by size, spend, or how you serve them? What changes between them? *(→ §2's tier table. If there are no tiers, say so in the file; "we treat everyone the same" is a real answer and stops the AI inventing a segmentation.)*
+16. **Walk me from "we win the work" to "we get paid" — the steps, and who owns each.** *(→ §2's lifecycle. This is the section that lets an AI answer operational questions without asking you, and it's usually four or five steps.)*
+17. **Which numbers do you actually watch, and who owns each one?** Not the targets — the instrument panel. *(Feeds the §6 table. If nobody owns a metric, write "unassigned"; an unowned metric is a finding.)*
 
 > **A note on question 4 and DP-4:** when they name a system of record, ask the follow-up the decision actually needs — ***"can I reach it from here, or is that one you'd have to open yourself?"*** Whether a system exists and whether *you* can read it are different facts, and DP-4 turns on the second one.
 
@@ -112,22 +114,6 @@
 
 ---
 
-## Block E — How we work together → the router's own sections
-
-*Short — five questions, five minutes. Say: "Last one, and it's about you and me rather than the business. These go in the file that loads every session."*
-
-**This block exists because the router has sections nothing else fills.** Editing rules, the decision filters and the operational pointers are three of its five sections, they're loaded on every single turn, and without these questions you'd be inventing them — in the file where inventing is least acceptable.
-
-1. **What should I be able to change without asking, and what always needs your sign-off?** Push for the grades, not a binary: a typo in a note, a rewrite of a page, a new file, anything that touches money or goes to another person. *(→ the router's "Editing rules". Without this you get a timid assistant or an unsupervised one, and you won't know which until it matters.)*
-2. **When you say yes to something, what are the two or three things you're actually checking?** *(→ the decision filters. If they can't name them, offer a guess drawn from their Block B answers and let them correct it — the correction is the answer. Never write filters they haven't confirmed out loud.)*
-3. **Is there anywhere a mistake would be expensive or hard to undo?** A live system, a customer-facing send, a shared file others depend on. *(→ the "never write without telling me" line. Ask it plainly; most people have exactly one and won't volunteer it.)*
-4. **Where do documents and plans go, and is there a naming convention I should follow?** *(→ "Operational pointers". One line each; skip anything they don't have.)*
-5. **Any tool I should reach for first — or one you'd rather I didn't use?** *(→ the tool-preference pointer. Also catches "don't put this in the cloud", which is worth knowing before you write anything.)*
-
-> **If they're out of patience:** questions 1 and 2 are the ones that matter. Ask those two, mark the rest `_TBD_`, and tell them the pointers fill in the first time something lands in the wrong place.
-
----
-
 ## Block D — Map → `Home.md`
 
 *Not an interview. Derived. Do the work first, then ask three questions.*
@@ -140,6 +126,23 @@
 4. **Ask: anything in here that nobody should navigate to on purpose?** Dated logs, exports, archives. Those get a line saying so, or get left off — and the map says which, so a reader isn't left wondering.
 
 Then write the map at the depth-2 ceiling: folders and load-bearing files, never leaf notes.
+
+## Block E — How we work together → the router's own sections
+
+*Short — five questions, five minutes. Say: "Last one, and it's about you and me rather than the business. These go in the file that loads every session."*
+
+**This block exists because the router has sections nothing else fills.** The editing rules (inside "Rules & boundaries"), the decision filters (inside "Decision-making") and the whole "Operational pointers" section have no other source — and they're loaded on every single turn. Without these questions you'd be inventing them, in the one file where inventing is least acceptable.
+
+1. **What should I be able to change without asking, and what always needs your sign-off?** Push for the grades, not a binary: a typo in a note, a rewrite of a page, a new file, anything that touches money or goes to another person. *(→ the router's "Editing rules". Without this you get a timid assistant or an unsupervised one, and you won't know which until it matters.)*
+2. **When you say yes to something, what are the two or three things you're actually checking?** *(→ the decision filters. If they can't name them, offer a guess drawn from their Block B answers and let them correct it — the correction is the answer. Never write filters they haven't confirmed out loud.)*
+3. **Is there anywhere a mistake would be expensive or hard to undo?** A live system, a customer-facing send, a shared file others depend on. *(→ the "never write without telling me" line. Ask it plainly; most people have exactly one and won't volunteer it.)*
+4. **Where do documents and plans go, and is there a naming convention I should follow?** *(→ "Operational pointers". One line each; skip anything they don't have.)*
+5. **Do you have somewhere reusable pieces live** — templates, snippets, saved prompts, past proposals — that I should check before building anything new? *(→ the router's "Before building" line. If the answer is no, say so in the file; it stops the AI hunting for a library that doesn't exist.)*
+6. **Any tool I should reach for first — or one you'd rather I didn't use?** *(→ the tool-preference pointer. Also catches "don't put this in the cloud", which is worth knowing before you write anything.)*
+
+> **If they're out of patience:** questions 1 and 2 are the ones that matter. Ask those two, mark the rest `_TBD_`, and tell them the pointers fill in the first time something lands in the wrong place.
+
+---
 
 ---
 
