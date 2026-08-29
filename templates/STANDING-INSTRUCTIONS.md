@@ -38,7 +38,13 @@ Keep 6-12 lines. Past that, the table needs grouping, not more rows.
 - Targets, priorities, what matters this quarter, cadence → `Goals.md`
 - Business model, customers, pricing, expansion → `Business.md`
 - Where anything lives → `Home.md`
-- <Your system of record — CRM, database, accounting> → <pointer, or "pull live, never cached">
+- <What system 1 owns — e.g. money, invoices, payroll> → <System 1>. <Who fetches: "I pull it live" (DP-4=C) or "you open it; I'll say which screen" (DP-4=D)>
+- <What system 2 owns — e.g. customers, orders, hours> → <System 2>. <Who fetches>
+<!-- ONE ROW PER SYSTEM. Most businesses have two or three with different truth
+     domains — accounting in one, customers in another. Cramming them into a single
+     "system of record" row is how a file starts lying. And say who does the
+     fetching in the row itself: under DP-4=D the AI CANNOT pull, and a row that
+     says "pull live" is instructing it to do the one thing it can't. -->
 - <Project work> → that project's `STATUS.md` / `README.md`
 - <Add rows for the depth files you actually have>
 
@@ -121,6 +127,16 @@ Facts to never get wrong:
 - **Projects:** <how a project folder gets created and what the session protocol is>.
 - **Tool preferences:** <use X for search, not Y — the fitting tool, not the default>.
 - **READMEs:** a folder earns a README only when one is true: (a) it's a navigation hub with real routing to do, (b) its purpose isn't obvious from the name, or (c) it has conventions or gotchas a newcomer would miss. Skip homogeneous leaf folders (transcripts, attachments, archives, daily notes). **Guard: if every section would just restate the folder name and a directory listing, write nothing** — an unread README that has gone wrong is worse than none. Update when the folder's structure, purpose or conventions change, never on individual file edits. Shape: frontmatter (`type` / `read_first` / `updated`), then Purpose → Start here → Map → State (builds only) → Gotchas, omitting any section that would restate the obvious.
+
+## Keeping these files true
+
+<!-- Phase 5 of the install writes this section. It's the retention mechanism:
+     without it, the root is accurate on day one and quietly wrong by month three. -->
+
+- When a session goes wrong in a way that's about me rather than the work → that's an `About-me.md` entry.
+- When I explain the same thing to an AI twice → it belongs in a root file.
+- When a number in a file gets used → check its date first.
+- **Review cadence:** `Goals.md` every <quarter/period — its priorities go stale fastest>; the other three every <six months>. Last reviewed: <YYYY-MM-DD>.
 
 ## Before building
 

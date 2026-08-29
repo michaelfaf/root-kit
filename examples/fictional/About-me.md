@@ -99,6 +99,14 @@ I don't know if I want three branches or one very profitable Fort Collins operat
 
 ---
 
+## Held, not solved
+
+I do not know whether I want three branches or one very profitable one, and my answer changes depending on who I spoke to last. Growth talk from the peer group makes Greeley feel obvious; a good week on the Anchor accounts makes it feel like a distraction from a business that already works.
+
+Do not resolve this for me and do not assume growth is the goal. When a decision leans on it, say which way it leans and let me pick. [Dana, 2026-08-12]
+
+---
+
 ## Never assume
 
 - That three branches is the plan. It isn't decided.

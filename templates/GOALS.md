@@ -25,6 +25,8 @@ updated: <YYYY-MM-DD>
 
 > **Related:** `<your standing-instructions file: CLAUDE.md or AGENTS.md, per DP-1>` (operating context) · `About-me.md` (personal context) · `Business.md` (the model)
 >
+> **Last updated:** <YYYY-MM-DD> *(keep this line even if you delete the frontmatter — under DP-6 = B it's the only file-level date here)*
+>
 > **Weekly progress is not captured here** — it lives in <where>. This file is target state only.
 
 ## The vision

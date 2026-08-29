@@ -40,6 +40,7 @@
 
 ### Phase 2 — Interview
 - [ ] Budget + privacy line + "I'll show you each file" stated up front
+- [ ] `install-notes.md` created (interview notes live here; moves to the workspace at Phase 5)
 - [ ] Block A — Business
 - [ ] Block B — Goals
 - [ ] Block C — About me
@@ -69,7 +70,8 @@
 - [ ] `_TBD_` list shown to the user
 - [ ] Three habits stated and written into the router
 - [ ] Review cadence set
-- [ ] `STATUS.md` + interview notes moved into the user's workspace (before any kit deletion)
+- [ ] `STATUS.md` + `install-notes.md` moved into the user's workspace (before any kit deletion)
+- [ ] Kit deletion offered ONLY if Phase 4's cold-read test is `[x]` — if `[~]`, tell the user to keep the folder
 - [ ] This file fully ticked, or every unticked line explicitly marked `[~]` DEFERRED/BLOCKED with a reason in Blockers
 
 ## Open `_TBD_` items

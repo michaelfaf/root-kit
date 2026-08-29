@@ -28,8 +28,10 @@ A standing-instructions file that **routes**, plus four root files that **hold t
 
 Before asking the user anything, find out what you're working with. Record findings in `STATUS.md` → Scan results.
 
+**Before you read anything:** tell the user in two sentences what this kit does and that Phase 0 means reading the files already in their workspace, and get a yes. Reading someone's private notes before they've agreed is not a scan, it's a surprise. *(This is what `AGENTS.md` rule 7 means by "start by" — the confirmation comes first, the paragraph-length walkthrough of what gets installed comes after the scan, when you can make it specific to what you found.)*
+
 1. **What am I?** Your own platform (Claude Code / Codex / Cursor / Cline / Copilot / chat-only / other), and whether you can: read and write files, run shell commands, spawn subagents, persist memory across sessions.
-2. **Which standing-instructions file does my platform actually read, and at what scope?** Claude Code reads `CLAUDE.md` (project root, plus `~/.claude/CLAUDE.md` globally). Codex, Cursor, Amp, Copilot and several others read `AGENTS.md`. Cursor also reads `.cursor/rules/*.mdc` files, which are scoped per-glob rather than global. Chat-only tools have a custom-instructions box with a character limit. **Scope matters more than filename**: a workspace-scoped file only fires when that workspace is open, and you must tell the user that.
+2. **Which standing-instructions file does my platform actually read, and at what scope?** Claude Code reads `CLAUDE.md` (project root, plus `~/.claude/CLAUDE.md` globally). Codex, Amp, Copilot, Cursor and several others read `AGENTS.md`. Several also have their own native mechanism: Cursor `.cursor/rules/*.mdc`, Cline `.clinerules/` (a file or a folder in the workspace root), Windsurf `.windsurfrules`. Chat-only tools have a custom-instructions box with a character limit. **If you're a tool not named here, say so out loud and check your own docs** — then record what you found in the scan table so the next session doesn't have to guess. **Scope matters more than filename**: a workspace-scoped file only fires when that workspace is open, and you must tell the user that.
 3. **Where does the user's work live, and who else can reach it?** An Obsidian vault, a notes folder, a git repo of documents, a Drive folder. Look before you ask. Note the *path* — is it under a personal cloud folder (iCloud, Dropbox, OneDrive), a shared drive, or a repo with other collaborators? Record the path and what you could and couldn't determine; DP-2 turns on it, and "syncs to their own devices" is a different answer from "another person can open it."
 4. **What's already at the root?** Read every existing instructions file, README, or notes-about-notes file **in full** before you write anything. You are merging into their conventions, not bulldozing them. If they already have a `CLAUDE.md` with rules in it, those rules survive — you're adding a router around them, not replacing them.
 5. **Is this Obsidian?** Look for a `.obsidian/` directory. It decides DP-6.
@@ -37,7 +39,7 @@ Before asking the user anything, find out what you're working with. Record findi
 
 **Chat-only fallback:** if you can't see their file system, you'll narrate and they'll create. Everything below still applies. `STATUS.md` lives in a note they paste back to you at the start of each session, and the four root files live wherever they keep documents. Say this out loud so they know what they're signing up for.
 
-Then tell the user, in one paragraph, what this kit installs, and confirm they want to proceed.
+Then tell the user, in one paragraph, what this kit will install *given what you found* — now you can be specific about which file the router goes in and where things will live — and confirm they're happy to continue.
 
 ---
 
@@ -52,13 +54,13 @@ Present each one conversationally: context, options with trade-offs, your recomm
 - **B. `AGENTS.md`** — the emerging cross-tool convention, read by Codex, Cursor, Amp, Copilot and others. *Trade-off:* Claude Code doesn't read it by default.
 - **C. Both** — `AGENTS.md` holds everything; `CLAUDE.md` is one line: *"Read AGENTS.md — it has your instructions for this repo."* *Trade-off:* two files, but one source of truth and no drift.
 - **D. The platform's custom-instructions box** — for chat-only tools with no file access. *Trade-off:* character-limited, so only the router fits; the depth files get pasted in on demand.
-- **E. A native per-tool rule file** — Cursor's `.cursor/rules/*.mdc` with `alwaysApply: true`, or your platform's equivalent. *Trade-off:* it genuinely always fires in that tool and nowhere else, so it's the most reliable option for one tool and invisible to every other.
+- **E. Your platform's own always-apply mechanism** — Cursor `.cursor/rules/*.mdc` with `alwaysApply: true`, Cline `.clinerules/`, Windsurf `.windsurfrules`, or whatever yours is called. *Trade-off:* it genuinely always fires in that tool and nowhere else, so it's the most reliable option for one tool and invisible to every other.
 
 **Recommendation:** **C** if the scan found any file-capable coding agent, even one — it costs one extra line and it means the root survives you switching tools next year, which people do more often than they expect. **A** if they're certain they'll only ever use Claude tooling. **D** only if there's genuinely no file access.
 
-**If they already have a `CLAUDE.md` with real rules in it and you're taking option C:** move their rules into `AGENTS.md` **first**, show them the merged file, and only then reduce `CLAUDE.md` to the pointer line. Never leave two files with overlapping rules — the kit's own words: worse than either one alone.
+**If your platform has a native always-apply mechanism (option E), take C *plus* E** — whichever tool you are. Put the router in `AGENTS.md`, and make the native rule file a single line: *"Read AGENTS.md at the start of every session."* The native mechanism is the thing that reliably fires; `AGENTS.md` is what keeps the content portable to the next tool. Never put the router's content in the native file — that locks it to one editor.
 
-**If the scan found Cursor specifically:** take **C *plus* E** — put the router in `AGENTS.md` and add a one-line always-apply `.mdc` that says *"Read AGENTS.md at the start of every session."* Cursor's own mechanism is the thing that reliably fires; `AGENTS.md` is what keeps the content portable to the next tool. Don't put the router content itself in the `.mdc`, or you've locked it to one editor.
+**If they already have a `CLAUDE.md` with real rules in it and you're taking option C:** move their rules into `AGENTS.md` **first**, show them the merged file, and only then reduce `CLAUDE.md` to the pointer line. Never leave two files with overlapping rules — the kit's own words: worse than either one alone.
 
 **Scope warning, all options:** if your platform's instructions file is workspace-scoped, it only fires when that workspace is open. Put it where the work lives, and tell the user which sessions will and won't see it. A user who thinks their rules are global and finds out they weren't loses trust in the whole system.
 
@@ -83,7 +85,7 @@ Present each one conversationally: context, options with trade-offs, your recomm
 
 **If they genuinely don't know: A.** It's the cheaper mistake to fix, and `About-me.md` is one file to move.
 
-**Revisit trigger:** Block A question 4 asks where their numbers live, and it routinely surfaces a shared system nobody mentioned here. **If Block A reveals a tool other people are in, come back to this decision before you write `About-me.md`** — you decided it a phase too early on purpose, because the interview is where the truth shows up.
+**Revisit trigger — one condition, and it's narrow:** come back to this decision only if the interview reveals that **the notes themselves live in, or sync to, a place another person can open.** A multi-user SaaS tool (their accounting system, their CRM, a team Notion) is *not* a trigger — `About-me.md` was never going to live there, and treating it as one makes this fire on every business and resolve to "no change," which just teaches you to skip it.
 
 The thing to know going in: **`About-me.md` is what forces the split later.** It's the file that makes the system work and the file you can't share. When a teammate first needs the business context, that's the split, and it's a good problem — it means the root got used.
 
@@ -187,11 +189,13 @@ Four rules, and they are not negotiable:
    *(And the placeholder rule in point 1 means **the kit's** `<placeholders>`. If the user's own conventions use angle brackets — `<client>/<client>.md` — that's their notation, not a hole; keep it, and say so in the wrap-up so nobody "fixes" it later.)*
 4. **Strip the HTML comment blocks last** — after the file reads correctly with them in. They're the specification; check the file against them before deleting.
 
-**Rough lengths, so you know when to stop:** `Business.md` 900–2,000 words · `Goals.md` 600–1,200 · `About-me.md` 500–900 at seed depth · `Home.md` 200–450. These are orientation, not gates — a business with two customer types and one product runs short, one with three revenue lines runs long. The real test is the same for all four: **would a session that read this file give better advice than one that didn't?** Padding fails it as surely as a gap.
+**Rough lengths, so you know when to stop:** `Business.md` 900–2,200 words (add ~400 per additional revenue line with genuinely different economics) · `Goals.md` 600–1,200 · `About-me.md` 700–1,200 at seed depth · `Home.md` 200–450. These are orientation, not gates — a business with two customer types and one product runs short, one with three revenue lines runs long. The real test is the same for all four: **would a session that read this file give better advice than one that didn't?** Padding fails it as surely as a gap.
 
 Then the deliberate duplication: **copy the two or three most important lines from `Business.md` section 8 into the standing-instructions file.** Those lines are the *tripwires* — the reasonable assumptions about this business that happen to be false, the ones that would otherwise get corrected by hand in every session forever. This is the only duplication in the whole system. It exists because a tripwire one lookup away fires too late: by the time the AI reads the business file, it has already given the wrong advice.
 
 Two or three, hard stop. A router carrying eight tripwires has stopped routing and started containing.
+
+**If they gave you five, rank by blast radius:** which wrong assumption corrupts the most turns before anyone notices? A tripwire about cost structure poisons every margin, pricing and hiring conversation and is invisible until someone does the arithmetic — that goes in. A tripwire that only matters when a specific topic comes up can wait in `Business.md` §8, because the router will have sent the session there by then. The test is not "which is most important to the business," it's **"which one would I otherwise correct in the first turn, over and over."**
 
 **The duplication rule, for everything else:** when a fact could sit in two depth files, it lives in the one that **owns the domain**, and the other one links to it. Targets are owned by `Goals.md` — `Business.md`'s TL;DR names them in a clause and points. A lost customer is owned by `Business.md` (competitive limit); `Goals.md` may cite it as a risk, by reference. The two-to-three tripwires in the router are the *only* copied text in the system. Everything else is a pointer, or it will drift.
 
@@ -236,15 +240,19 @@ The install isn't finished until it's been used on something real.
 
    ## Run it one of two ways
 
-   **A. A fresh agent session in this workspace** (new Claude Code / Codex / Cursor
-   session, no history). Say: "Read only [ROUTER FILENAME] and whatever it points
-   you to. Then answer these five questions." — best option: it exercises the
-   routing table, which is the half that actually fails.
+   **A. A fresh agent session in this workspace** (new Claude Code / Codex / Cursor /
+   Cline session, no history). Say: "Read only [ROUTER FILENAME] and whatever it
+   points you to. Answer these five questions, **and after each answer list every
+   file you opened to get it.**" — **use this one if you can.** It's the only route
+   that tests the routing table, which is the half that actually fails.
 
    **B. A brand-new chat with no file access** (claude.ai, ChatGPT). A fresh chat
-   cannot see this folder, so you must paste the files in first: paste
-   [ROUTER FILENAME], then [LIST THE DEPTH FILES IT ROUTES TO]. Then ask the five
-   questions.
+   cannot see this folder, so you paste the files in first: paste [ROUTER FILENAME],
+   then [LIST THE DEPTH FILES IT ROUTES TO]. Then ask the five questions.
+   **Know what B does and doesn't prove:** because you hand it everything up front,
+   it checks that the content is there and readable. It does **not** test whether
+   the router would have found it. If B passes, the depth is fine and the routing
+   is still unverified.
 
    ## The questions
 
@@ -252,14 +260,18 @@ The install isn't finished until it's been used on something real.
    2. What's the target this year, and the priority this quarter?
    3. Name one thing an outsider would get wrong about this business.
    4. How does this person want to be pushed back on?
-   5. [THE SPECIFIC QUESTION — see below]
+   5. [ONE SPECIFIC QUESTION ABOUT THIS BUSINESS — pick something whose answer is
+      NOT guessable from a folder name. "Why did we stop doing X, and is that
+      settled?" works. "Where are the meeting notes?" does not.]
 
    ## Scoring
 
    A pass is a correct answer reached from the files alone.
 
    **Not a pass:** a partial answer · "the files don't say" where the files *should*
-   say · an answer only reachable by opening a file the router never points to.
+   say · an answer only reachable by opening a file the router never points to
+   (this is why route A asks it to list the files it opened — check that list
+   against what the router actually points to).
 
    **Is a pass:** "that number isn't in the files — it lives in [SYSTEM], which the
    notes name as the place to look." That is the designed behaviour for anything
@@ -303,7 +315,7 @@ The install isn't finished until it's been used on something real.
    - *"When a number in a file gets used, check its date."*
 5. **Set the review cadence.** Quarterly for `Goals.md` (priorities and statuses go stale fastest), twice a year for the rest. Put it wherever they'll actually see it.
 6. **Move `STATUS.md` and your interview notes into the user's workspace** — `STATUS.md` is the resume spine and the notes are the sole provenance record for four files. Both currently live in the kit clone, which a fresh session opened on their workspace cannot see. Put them somewhere the workspace can reach (a `root-kit-install/` subfolder is fine).
-7. *Then* offer to delete the kit folder. The files are installed; the kit was scaffolding — but never delete it before step 6, or you delete your own resume mechanism.
+7. *Then* offer to delete the kit folder — **but only if Phase 4's cold-read test is `[x]`, not `[~]`.** While it's deferred, the scoring rules, the pass/fail criteria and the re-run loop live in `IMPLEMENT.md` inside the kit; delete it and the user has a test they can run and no way to interpret the result. If the check is still deferred, say so: *"keep this folder until you've run the cold read — the instructions for what to do with a failure are in it."* The files are installed either way; the kit was scaffolding.
 
 ---
 

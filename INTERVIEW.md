@@ -31,8 +31,12 @@
 
    What you never do is take the silence as a licence to write something plausible. **"You decide" is about the wording; it is never about the facts.** If they ask you to write a whole file for them — a real request, and not the same as asking you to invent — say yes to the drafting and no to the inventing: *"I'll write every word of it. I just can't make up what goes in it — six one-line questions and it's done."* Then ask the six.
 
-8. **You are allowed to disagree.** If an answer contradicts one from ten minutes ago, say so and ask which is right. Contradictions found now are worth more than the entire rest of the interview.
-9. **Take notes as you go, in a file.** Don't hold twenty minutes of answers in conversation and hope. If a session dies mid-interview, the notes are what saves it.
+8. **"Why do you need to know that?" is a fair question — answer it in one line and move on.** Decisive, time-poor people ask it, and "it's on the list" is not an answer. Each question below that tends to draw the challenge carries its justification inline; use it, don't improvise. If you genuinely can't say what a question is for, **skip it** — that's a real signal about the question, not about them.
+
+   The technique that works when the one-liner doesn't land: **quote their own earlier answer back.** *"You told me twenty minutes ago you want to read the FX side of a contract instead of nodding along — that's what I'm trying to capture."* Their words beat your reasoning.
+
+9. **You are allowed to disagree.** If an answer contradicts one from ten minutes ago, say so and ask which is right. Contradictions found now are worth more than the entire rest of the interview.
+10. **Take notes as you go, in a file.** Don't hold twenty minutes of answers in conversation and hope. If a session dies mid-interview, the notes are what saves it.
 
 ---
 
@@ -47,7 +51,7 @@
 5. **Where does the money go?** What counts as cost of goods in your model, and what's overhead? Which line do people outside the business get wrong?
 6. **Why do customers pick you over the alternative?** Then, harder: **what claim do you deliberately NOT make?** *(This second question is worth more than the first. Everyone can say what they're good at; the people who know their positioning can say what they've ruled out.)*
 7. **Where do you operate, and what's the growth lever?** More customers here, new geography, new product, bigger customers?
-8. **Who's on the team, and who decides what?** For each: what they own, what they can decide alone, what has to come to you.
+8. **Who's on the team, and who decides what?** For each: what they own, what they can decide alone, what has to come to you. *(If asked why: the most common form of useless advice is advice aimed at the wrong person — telling you to do something your ops lead already owns, or telling you to delegate something only you can sign.)*
 9. ***The one that matters most:*** **what are the three things an outsider gets wrong about your business that would make their advice useless?** *(If they stall: "What did the last consultant, banker, or AI tell you that was just wrong for you? What do you find yourself explaining more than once a month?" These become section 8, and section 8 is why the file exists.)*
 10. **What have you deliberately stopped doing, and why?** *(This stops the AI enthusiastically proposing the thing they already killed. Get the reasoning, not just the decision.)*
 11. **Where do you lose?** The honest one. Which situation does a competitor win, and what does that tell you about where to compete?
@@ -97,7 +101,7 @@
    *(Get specifics. "Be honest with me" is not an instruction — every AI already thinks it's doing that.)*
 6. **Should we build a gate?** *(Offer it: "We can turn that blind spot into something that fires automatically. Name the trigger — the exact moment I should stop you — and three questions I should ask out loud before helping. What happens if you override it?" This is the highest-value thing in the whole interview. A blind spot written in a file is a fact; a gate is a behavior change.)*
 7. **Decision style** — fast and good enough, or slow and certain? Does that change by domain? Where do you want options, and where do you want me to just pick?
-8. **Numbers and jargon** — which topics do you want the concept explained before the recommendation? *(Ask it plainly. Most people have one and won't volunteer it.)*
+8. **Where do you want me to slow down and explain before recommending?** Some topics you want the answer; some you want the reasoning first. Which are which? *(Phrase it this way, not as "what don't you understand" — it's a preference question, not a competence test, and the competence-test phrasing is what makes people bristle. If asked why: it's the difference between a recommendation you can act on and one you have to reverse-engineer.)*
 9. **Voice** — when I write something that goes out under your name, how should it sound? Any words you never use?
 10. **What's true about you right now** that changes what good advice looks like? Energy, health, workload, life stage. *(Date it. This section is wrong in six months by design.)*
 11. **When you're stressed or overloaded, what do you actually do?** *(Sensitive. Offer the out: "Skip this if you'd rather." The ones who answer get the most out of the file, because you can name the pattern before they do.)*
@@ -109,6 +113,8 @@
 ## Block D — Map → `Home.md`
 
 *Not an interview. Derived. Do the work first, then ask three questions.*
+
+> **If they try to skip this block** — "the folders are obvious" — they're half right, and say so: you *can* derive the folder list yourself, and you will. What you can't derive is the **Key Routes** section, which is the part they'll actually use: the three things they look up most, in their own words. Offer the deal — *"I'll do the map myself; give me two answers and we're done."* Two questions is a much easier yes than a block.
 
 1. **List their top-level folders yourself** — read the directory, don't ask. *(Chat-only: ask them to paste the list.)*
 2. **For each folder whose purpose isn't obvious from its name, ask for one line.** Skip the obvious ones; don't make them narrate `Invoices/`.

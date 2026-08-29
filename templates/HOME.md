@@ -27,6 +27,8 @@ updated: <YYYY-MM-DD>
 
 # <Workspace name> — map
 
+> **Last updated:** <YYYY-MM-DD> *(keep this line even if you delete the frontmatter — under DP-6 = B it's the only date this file has)*
+
 Where things live. Top-level folders and load-bearing files only, never leaf notes. Each entry routes onward.
 
 ## Start here — root files

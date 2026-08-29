@@ -8,17 +8,17 @@ Five completed files for **Ridgeline Grounds Co.**, an invented commercial lands
 
 Read it if you want to see: how the router stays short while routing to everything; how the tripwire section in `Business.md` gets written; what a named gate looks like in `About-me.md`; how numbers carry sources and dates; and how the deliberate duplication works — the two most important tripwires appear in both `Business.md` and the router, on purpose.
 
-**Which decisions this set demonstrates:** DP-1 = B (`AGENTS.md` holds the router) · **DP-4 = D** (Aspire is a real system of record that the AI *cannot* reach, so the router names it as a human-fetch source — the most common small-business case) · **DP-6 = B** (plain relative markdown links, no frontmatter-dependent wikilinks) · DP-5 = A (the three-test README rule, stated in full in the router so it survives the kit being deleted) · DP-7 = A (Ridgeline's own folder scheme, not one this kit imposed).
+**Which decisions this set demonstrates:** DP-1 = B (`AGENTS.md` holds the router) · **DP-4 = D** (Aspire is a real system of record that the AI *cannot* reach, so the router names it as a human-fetch source — the most common small-business case) · **DP-6 = C** (the minimal hybrid: three frontmatter keys kept, links plain and relative — not wikilinks) · DP-5 = A (the three-test README rule, stated in full in the router so it survives the kit being deleted) · DP-7 = A (Ridgeline's own folder scheme, not one this kit imposed).
 
 Ridgeline is nothing like the business this kit came from, which is the point. If the shape survives being ported onto a company with W-2 crews, seasonal snow contracts, and a completely different folder scheme, the shape is the portable part.
 
 | File | What it shows |
 |---|---|
-| `AGENTS.md` | the router — 722 words, almost all of it pointing |
+| `AGENTS.md` | the router — 802 words, almost all of it pointing |
 | `Home.md` | the map, at the depth-2 ceiling |
 | `Business.md` | the model, including section 8's tripwires |
 | `Goals.md` | targets, this quarter's priorities with owners and done-lines |
-| `About-me.md` | the owner, written past seed depth — a full first pass, including the sections a seed install would stub |
+| `About-me.md` | the owner, written past seed depth — a full first pass, including the sections a seed install would leave as stubs |
 
 ## `live-vault/` — what a real one looks like after a year
 

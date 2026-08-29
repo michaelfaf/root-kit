@@ -96,7 +96,7 @@ Canonical source for the model, customers, pricing, and expansion. The standing-
 |---|---|---|
 | <> | <> | <> |
 
-> Live rosters and counts live in <system of record>, not here — pull on demand. They shift constantly and would go stale pinned to a file.
+> Live rosters and counts live in <system of record>, not here. They shift constantly and would go stale pinned to a file. <Say who fetches: "the AI pulls it" (DP-4=C) or "open <system> → <screen>; the AI can't reach it" (DP-4=D).>
 
 ### Lifecycle
 
@@ -119,7 +119,7 @@ Canonical source for the model, customers, pricing, and expansion. The standing-
 - <mechanism>
 - <mechanism>
 
-> **Live numbers:** each customer's agreed pricing lives in <system of record> — pull when a specific figure is needed. <Why there is no canonical price list here, if there isn't.>
+> **Live numbers:** each customer's agreed pricing lives in <system of record>. <Who fetches — under DP-4=D write "ask me and I'll pull it from <system>", not "pull it", because the AI can't.> <Why there is no canonical price list here, if there isn't.>
 
 ### Margin mechanics
 
