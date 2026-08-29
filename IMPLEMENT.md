@@ -75,6 +75,12 @@ The thing to know going in: **`About-me.md` is what forces the split later.** It
 - **B. Full** — the whole of Block C plus the optional sections, in one sitting. Budget two hours and expect it to be draining. *Trade-off:* long, and half of what you write on day one is guesswork about yourself.
 - **C. Skip for now.** *Trade-off:* the AI advises a generic person in your situation instead of you, which is most of what you were trying to fix.
 
+**If C (or DP-2 = C): four other things change, and you must do all four** — otherwise the install ships with a routing line pointing at a file that doesn't exist:
+> 1. Delete the `About-me.md` row from the router's routing table.
+> 2. Move the push-back rules into the router's "Rules & boundaries" section instead — that part is too valuable to lose, and it fits in three bullets. Ask Block C questions 4, 5 and 7 anyway, even if nothing else in Block C gets asked.
+> 3. Skip question 4 of the Phase 4 cold-read test, and record in `STATUS.md` that the personal layer is not installed and therefore not tested.
+> 4. Drop the first of the three Phase 5 habits and keep the other two.
+
 **Recommendation:** **A**, and this isn't hedging. The seed is enough to change AI behavior on day one — push-back rules and decision style do most of the work. The best entries in this file come from friction that hasn't happened yet: the gate that's actually worth having is the one written the week after you did the thing you keep doing. Set the habit instead: **when a session goes wrong in a way that's about you rather than the work, that's an `About-me.md` entry.** Tell the user that line explicitly; it's the whole retention mechanism.
 
 ### DP-4 — Does the file hold the numbers, or point at where they live?
@@ -96,6 +102,8 @@ The rule underneath: **pin what's structural, point at what's live.** How you ch
 - **C. None** — rely on folder names. *Trade-off:* fine until a folder has subfolders or a convention, then someone guesses wrong.
 
 **Recommendation:** **A**, with the guard stated out loud: *if every section you'd write would just restate the folder name plus a directory listing, write nothing.* B fails not because it's expensive to write but because an unread README that has gone wrong actively misinforms — it's the one that gets believed. Update trigger is **structure, purpose, or conventions changed** — never individual file edits. Template and full rule: `templates/FOLDER-README.md`.
+
+**If B or C:** delete the "READMEs" bullet from the router template's "Operational pointers" section — it states rule A. For B, replace it with the user's actual rule ("every folder gets a README with purpose and contents"). For C, delete it and skip Phase 3c.
 
 ### DP-6 — Obsidian-native or plain markdown?
 
@@ -149,7 +157,9 @@ Four rules, and they are not negotiable:
 3. **Every number carries the date it was stated.**
 4. **Strip the HTML comment blocks last** — after the file reads correctly with them in. They're the specification; check the file against them before deleting.
 
-Then the deliberate duplication: **copy the two or three most important lines from `Business.md` section 8 into the standing-instructions file.** This is the only duplication in the whole system. It exists because those facts must be true in every session without a depth file being read — the tripwires can't be one lookup away, or they fire too late.
+Then the deliberate duplication: **copy the two or three most important lines from `Business.md` section 8 into the standing-instructions file.** Those lines are the *tripwires* — the reasonable assumptions about this business that happen to be false, the ones that would otherwise get corrected by hand in every session forever. This is the only duplication in the whole system. It exists because a tripwire one lookup away fires too late: by the time the AI reads the business file, it has already given the wrong advice.
+
+Two or three, hard stop. A router carrying eight tripwires has stopped routing and started containing.
 
 Reference set: `examples/fictional/` shows all five files completed for an invented company. `examples/live-vault/` has two real ones, unedited, from the workspace this kit was extracted from.
 
@@ -179,10 +189,12 @@ The install isn't finished until it's been used on something real.
    - What does this business do and who pays for it?
    - What's the target this year and what's the priority this quarter?
    - Name one thing an outsider would get wrong about this business.
-   - How does this person want to be pushed back on?
+   - How does this person want to be pushed back on? *(Skip only if DP-2 or DP-3 = C — and record in `STATUS.md` that the personal layer is untested.)*
    - Where would I find <a thing in the workspace>?
 
-   Five clean answers with no prior context means the root works. **If a question can't be answered, the gap is in the file, not the reader** — go fix the file, then re-run. This test is the acceptance check for the whole install; don't declare it passed without running it, and don't count a partial answer as a pass.
+   Five clean answers with no prior context means the root works. **If a question can't be answered, the gap is in the file, not the reader** — go fix the file, then re-run. This test is the acceptance check for the whole install; don't declare it passed without running it.
+
+   **What is not a pass:** a partial answer; an answer you could only give because you remembered the interview; *"the files don't say"*; or an answer assembled by reading a file the router doesn't actually route to. That last one is the common failure — it means the depth is fine and the routing table is broken, which is the half that matters.
 
    *Chat-only:* open a brand-new chat, paste only the router plus the file it points to, and ask the five questions there.
 

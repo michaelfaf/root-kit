@@ -48,7 +48,7 @@ About an hour for all four interview blocks, plus fifteen minutes of decisions a
 |---|---|
 | `OVERVIEW.md` | The full explanation — read this first to understand the system before installing |
 | `IMPLEMENT.md` | The setup walkthrough: scan, seven decisions, interview, install, live test (written for your AI, readable by you) |
-| `INTERVIEW.md` | The question bank — the heart of the kit. Four blocks, ~45 questions, and the rules for asking them |
+| `INTERVIEW.md` | The question bank — the heart of the kit. Four blocks, 38 questions plus follow-ups, and the rules for asking them |
 | `STATUS.md` | Progress checklist — your AI ticks it off and records your decisions here |
 | `templates/` | The six file templates, annotated section by section with what belongs and what doesn't |
 | `examples/fictional/` | A complete filled-in set for an invented company — what "done" looks like |
